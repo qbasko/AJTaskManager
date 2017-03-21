@@ -1,0 +1,69 @@
+﻿<common:BindablePage
+    x:Class="AJTaskManagerMobile.Views.TaskSubitemWorkPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AJTaskManagerMobile.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:common="using:AJTaskManagerMobile.Common"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:notification="using:Syncfusion.UI.Xaml.Controls.Notification"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding TaskSubitemWorkPageViewModel, Source={StaticResource Locator}}"
+    Name="TaskSubitemWorks">
+
+    <Page.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <ImageBrush x:Key="BackgroundImageBrush" ImageSource="../Assets/backgroundOnePage.png"/>
+                    <ImageBrush x:Key="ItemsBackgroundImageBrush" ImageSource="../Assets/ItemsBackground2.png"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrast">
+                    <ImageBrush x:Key="BackgroundImageBrush" ImageSource="{x:Null}"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ItemsBackgroundImageBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.15*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Left" FontSize="30"  Margin="10,35,100,0" TextWrapping="Wrap" Text="{Binding TaskSubitemTitle}" VerticalAlignment="Top"/>
+        <Grid Grid.Row="1" Margin="0,15,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.4*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,0">
+                <Button Content="START" IsEnabled="{Binding IsStartButtonEnabled, Mode=TwoWay}" Command="{Binding StartButtonCommand}" BorderBrush="SaddleBrown" BorderThickness="3" Foreground="SaddleBrown" Margin="50,50,50,0" HorizontalAlignment="Left"/>
+                <Button Content="STOP" IsEnabled="{Binding IsStopButtonEnabled, Mode=TwoWay}" Command="{Binding StopButtonCommand}"  BorderBrush="SaddleBrown" BorderThickness="3" Foreground="SaddleBrown" Margin="30,50,50,0" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <TextBlock Text="Elapsed time:  " FontSize="18" Foreground="DimGray"/>
+                <TextBlock Text="{Binding ElapsedTime, Mode=TwoWay}" FontSize="18" Foreground="DimGray"/>
+            </StackPanel>
+        </Grid>
+        <notification:SfBusyIndicator Grid.Row="2" IsBusy="{Binding IsBusy, Mode=TwoWay}"/>
+        <ListView Grid.Row="2" ItemsSource="{Binding TaskSubitemWorks, Mode=TwoWay}" VerticalAlignment="Top" ShowsScrollingPlaceholders="True" Margin="10,20,0,10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Entry}" Foreground="SaddleBrown" HorizontalAlignment="Stretch"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0">
+            <TextBlock Text="Total:  " FontSize="18" Foreground="DimGray"/>
+            <TextBlock Text="{Binding TotalElapsedTime, Mode=TwoWay}" FontSize="18" Foreground="DimGray"/>
+        </StackPanel>
+    </Grid>
+</common:BindablePage>

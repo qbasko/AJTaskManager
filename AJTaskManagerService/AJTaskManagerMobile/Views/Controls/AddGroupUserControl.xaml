@@ -1,0 +1,40 @@
+﻿<UserControl xmlns:Input="using:Syncfusion.UI.Xaml.Controls.Input" 
+    x:Class="AJTaskManagerMobile.Views.Controls.AddGroupUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AJTaskManagerMobile.Views.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="210"
+    d:DesignWidth="400">
+
+    <Border BorderThickness="3" BorderBrush="{StaticResource PhoneAccentBrush}">
+        <Grid>
+            <StackPanel Background="SaddleBrown">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox Header="User's e-mail:" Grid.Row="0" Text="{Binding Email, Mode=TwoWay}" x:Name="TextBox" VerticalAlignment="Center" Margin="20,10,20,0" Background="White" />
+                    <!--<ComboBox Header="Role" Grid.Row="1" VerticalAlignment="Center" Margin="20,10,20,0" ItemsSource="{Binding AvailableRoleTypes, Mode=TwoWay}" SelectedItem="{Binding SelectedRoleType, Mode=TwoWay}" MaxDropDownHeight="120">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=RoleName}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>-->
+                    <Input:SfComboBox Header="Role" Grid.Row="1" VerticalAlignment="Center" Margin="20,10,20,0" Height="40" ItemsSource="{Binding AvailableRoleTypes, Mode=TwoWay}" SelectedItem="{Binding SelectedRoleType, Mode=TwoWay}" Background="AntiqueWhite">
+                        <Input:SfComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=RoleName}"/>
+                            </DataTemplate>
+                        </Input:SfComboBox.ItemTemplate>
+                    </Input:SfComboBox>
+                </Grid>
+                <Button Grid.Row="2" Command="{Binding AddNewItemCommand}" CommandParameter="{Binding ElementName=TextBox}" Margin="20,15,20,0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Content="Add" MinWidth="10" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

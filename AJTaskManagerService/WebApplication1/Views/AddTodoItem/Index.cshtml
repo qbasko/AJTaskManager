@@ -1,0 +1,68 @@
+﻿@using WebApplication1.Models
+@model IEnumerable<WebApplication1.Models.AddTodoItemModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Subtasks</h2>
+
+<p>
+    @Html.ActionLink("Create new subtask", "Create", new {listId = ViewBag.ListId})
+</p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Subtask Name", "Index", new { sortOrder = ViewBag.ItemNameSortParam, listId = ViewBag.ListId })
+           @* @Html.DisplayNameFor(model => model.Text)*@
+        </th>
+        <th>
+            @Html.ActionLink("Is Completed", "Index", new { sortOrder = ViewBag.IsCompletedParam, listId = ViewBag.ListId })
+            @*@Html.DisplayNameFor(model => model.IsCompleted)*@
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.TodoListId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodoListName)
+        </th>*@
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCompleted)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.TodoListId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TodoListName)
+        </td>*@
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {listId = item.TodoListId, itemId = item.Id}) |
+                @*@Html.ActionLink("Details", "Details", new { id=item.Id }) |*@
+                @Html.ActionLink("Delete", "Delete", new { listId = item.TodoListId, itemId = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    @Html.ActionLink("Back to tasks", "Index", "AddToDoList")
+</div>

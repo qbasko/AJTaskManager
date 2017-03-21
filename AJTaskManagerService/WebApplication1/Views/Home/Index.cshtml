@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    @*<h1>AJTaskManager</h1>
+        <p class="lead">Tutaj będzie jakieś ładne logo</p>*@
+    <img id="img_logo" alt="Logo" src="@Url.Content("~/Assets/MainLogo.png")" />
+</div>
+
+<div class="row text-center">
+    <div class="col-md-4">
+        <a href="@Url.Action("Index", "AddTodoList")">
+            <h2>Tasks</h2>
+            <p>
+                Tasks allows you to add quick tasks or create simple check lists.
+                You can use it as a shopping lists, etc.
+            </p>
+            @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="@Url.Action("Index", "TaskItem")">
+            <h2>Projects</h2>
+            <p>
+                Projects allows you to create more detailed task lists. Each task can have child activities.
+                You can use it to define things to do in a project or tasks that you have to do between selected period of time.
+            </p>
+            @* <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>*@
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="@Url.Action("Index", "Statistic")">
+            <h2>Reports</h2>
+            <p>
+                Reports allows you to generate different charts to show performance of you and your group.
+            </p>
+            @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
+        </a>
+    </div>
+</div>

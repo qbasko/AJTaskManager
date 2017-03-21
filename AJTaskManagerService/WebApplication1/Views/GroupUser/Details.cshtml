@@ -1,0 +1,50 @@
+﻿@model WebApplication1.Models.GroupUserModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Group User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @*<dt>
+            @Html.DisplayNameFor(model => model.UserGroupId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserGroupId)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserEmail)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.RoleTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoleTypeId)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoleName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { userGroupId = Model.UserGroupId }) |
+    @Html.ActionLink("Back to List", "Index", new {groupId = ViewBag.GroupId})
+</p>

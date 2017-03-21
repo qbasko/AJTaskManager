@@ -1,0 +1,77 @@
+﻿<common:BindablePage
+    x:Class="AJTaskManagerMobile.Views.TaskSubitemForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AJTaskManagerMobile.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:common="using:AJTaskManagerMobile.Common"
+    xmlns:input="using:Syncfusion.UI.Xaml.Controls.Input"
+    xmlns:notification="using:Syncfusion.UI.Xaml.Controls.Notification"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding TaskSubitemViewModel, Source={StaticResource Locator}}"
+    Name="TodoListsPage">
+    <ScrollViewer Background="SaddleBrown">
+        <Grid Background="SaddleBrown"  >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox Header="Activity name:" Grid.Row="0" Text="{Binding Name, Mode=TwoWay}" VerticalAlignment="Center" Margin="20,5,20,0" Background="White" />
+            <TextBox Header="Description:" Grid.Row="1" Text="{Binding Description, Mode=TwoWay}" VerticalAlignment="Center" Margin="20,5,20,0" Background="White" TextWrapping="Wrap" AcceptsReturn="True" Height="Auto"/>
+            <TextBox Header="Executor:" Grid.Row="2" VerticalAlignment="Center" Margin="20,5,20,0" Background="Transparent" TextWrapping="Wrap" AcceptsReturn="True" Height="Auto"/>
+            <input:SfComboBox Header="Executor" Grid.Row="2" Height="40" VerticalAlignment="Center" Margin="20,30,20,0" ItemsSource="{Binding AvailableGroupUsers, Mode=TwoWay}" SelectedItem="{Binding SelectedExecutor, Mode=TwoWay}" Background="AntiqueWhite">
+                <input:SfComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=FullName}"/>
+                    </DataTemplate>
+                </input:SfComboBox.ItemTemplate>
+            </input:SfComboBox>
+            <TextBox Header="Status:" Grid.Row="3" VerticalAlignment="Center" Margin="20,5,20,0" Background="Transparent" TextWrapping="Wrap" AcceptsReturn="True" Height="Auto"/>
+            <input:SfComboBox Header="Status" Grid.Row="3" Height="40" VerticalAlignment="Center" Margin="20,30,20,0" ItemsSource="{Binding AvailableTaskStatuses, Mode=TwoWay}" SelectedItem="{Binding SelectedTaskStatus, Mode=TwoWay}" Background="AntiqueWhite">
+                <input:SfComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Status}"/>
+                    </DataTemplate>
+                </input:SfComboBox.ItemTemplate>
+            </input:SfComboBox>
+
+            <DatePicker Header="Start Date" Grid.Row="4" Date="{Binding StartDateTime, Mode=TwoWay, Converter={StaticResource DateTimeOffsetConverter}}" Margin="20,5,20,0" Background="SaddleBrown"/>
+            <DatePicker Header="End Date" Grid.Row="5" Date="{Binding EndDateTime, Mode=TwoWay, Converter={StaticResource DateTimeOffsetConverter}}" Margin="20,5,20,0" Background="SaddleBrown"/>
+            <TextBox Header="Predecessor:" Grid.Row="6" VerticalAlignment="Center" Margin="20,10,20,0" Background="Transparent" Height="Auto"/>
+            <input:SfComboBox Header="Predecessor" Grid.Row="6" Height="40" VerticalAlignment="Center" Margin="20,30,20,0" ItemsSource="{Binding AvailableTaskSubitems, Mode=TwoWay}" SelectedItem="{Binding SelectedPredecessor, Mode=TwoWay}" Background="AntiqueWhite">
+                <input:SfComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Name}"/>
+                    </DataTemplate>
+                </input:SfComboBox.ItemTemplate>
+            </input:SfComboBox>
+            <TextBox Header="Successor:" Grid.Row="7" VerticalAlignment="Center" Margin="20,5,20,0" Background="Transparent" Height="Auto"/>
+            <input:SfComboBox Header="Successor" Grid.Row="7" Height="40" VerticalAlignment="Center" Margin="20,30,20,0" ItemsSource="{Binding AvailableTaskSubitems, Mode=TwoWay}" SelectedItem="{Binding SelectedSuccessor, Mode=TwoWay}" Background="AntiqueWhite">
+                <input:SfComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Name}"/>
+                    </DataTemplate>
+                </input:SfComboBox.ItemTemplate>
+            </input:SfComboBox>
+            <TextBox Header="Estimation (hours):" Grid.Row="8" VerticalAlignment="Center" Margin="20,5,20,0" Background="Transparent" Height="Auto"/>
+            <input:SfNumericTextBox Grid.Row="8" Text="{Binding EstimationInHours, Mode=TwoWay}" VerticalAlignment="Center" Margin="20,30,20,0" Delimeter="," MaximumNumberDecimalDigits="2"/>
+            <StackPanel Grid.Row="9" Orientation="Horizontal" Margin="20,0,20,0" HorizontalAlignment="Stretch">
+                <Button Content="Save" Margin="0,0,0,0" Command="{Binding SaveCommand}" HorizontalAlignment="Left"/>
+                <notification:SfBusyIndicator IsBusy="{Binding IsBusy, Mode=TwoWay}" Margin="40,0,40,0" Width="61"  HorizontalAlignment="Center"/>
+                <Button Content="Cancel"  Command="{Binding CancelCommand}" HorizontalAlignment="Right"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</common:BindablePage>

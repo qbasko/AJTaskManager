@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="762ecc49-5c6b-4241-bdd9-689ba273a3b5" name="UMLComponentDiagram1" linkedPackageId="7817102b-da07-4895-96c0-541834a99b12" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="4a76024c-7d69-42d5-bf28-21828b0bd86b">
+      <profileInstance Id="c8568530-4562-49b8-b033-7c4c4942f3c5" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d9892419-4524-4a3f-a8cb-32120399934a">
+      <profileInstance Id="5cbd8b42-aee6-4dfc-93d7-b3afa5333e54" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="d03080ed-a2c3-412b-83b4-75f6cd4c9f80" name="Windows Azure Mobile Service" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b03ecd84-0629-4bff-a794-7f79fa96a2ad" />
+        <ownedAttributesInternal>
+          <part Id="02ed4ff3-2493-4c0d-aec8-91c12e4697a6" name="Baza danych" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="b7434ec6-b82d-4113-9e61-d622bbe7164a" />
+            <type_NamedElement>
+              <componentMoniker Id="74575b31-cb31-4dc7-9252-89067a74c614" />
+            </type_NamedElement>
+          </part>
+          <providedInterface Id="18aaf19a-d8bf-4ac6-af87-287894fdfb68" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="708dac89-5304-4317-b85f-08ac598fc3b7" />
+            <type_NamedElement>
+              <interfaceMoniker Id="fb269aea-8fc2-4bef-bdd0-b816e2637697" LastKnownName="Interface" />
+            </type_NamedElement>
+          </providedInterface>
+          <part Id="08c39816-7f70-4c01-9022-3487fcdc7562" name="Moduł dostępu do danych" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="8679840d-c45b-401f-91f7-44e50f601685" />
+            <type_NamedElement>
+              <componentMoniker Id="6a3a2969-beae-4723-ac08-daece673e556" />
+            </type_NamedElement>
+          </part>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="e89a23b4-2ec8-4b9b-8b4f-73dfd0e09d8d" name="Aplikacja mobilna - Windows Phone" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6ff92322-6810-4952-92c9-f502ae2ae5bd" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="162e104b-42e9-4e80-93fb-95ceac021409" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="a26c003c-96d1-4556-8d9b-01bcfd5d28e2" />
+            <suppliersInternal>
+              <dependency Id="1043a92d-227f-413f-96d1-786235170130">
+                <providedInterfaceMoniker Id="18aaf19a-d8bf-4ac6-af87-287894fdfb68" LastKnownName="Port1" />
+                <elementDefinition Id="f7df66af-70cf-4135-9371-959a7a8fb617" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="bf669967-fd4c-4799-8d61-e8f167de2aa7" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="7a28c1d9-abb0-4738-868f-048937f41bd4" name="Aplikacja internetowa - ASP.NET MVC" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8f0c91f8-a86b-4cb3-8cc6-a86305404ebc" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="aa413fae-ccbd-4097-9c3f-6c05a0a05ad8" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="e0d5ddb8-433e-4b25-b3c9-a41030884d64" />
+            <suppliersInternal>
+              <dependency Id="becc1d33-ee8e-4806-8157-161773826faf">
+                <providedInterfaceMoniker Id="18aaf19a-d8bf-4ac6-af87-287894fdfb68" LastKnownName="Port1" />
+                <elementDefinition Id="1475806b-d971-4471-9ab1-339fcfdfa38c" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="505a2dd5-aa7d-4f82-94c0-50a218ab5b11" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="74575b31-cb31-4dc7-9252-89067a74c614" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ee3c5eeb-957c-42db-845a-9842d38ef5b4" />
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="fb269aea-8fc2-4bef-bdd0-b816e2637697" name="Interface" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="03c70164-2d2f-4fb1-a19a-078e6d5d8d8b" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="6a3a2969-beae-4723-ac08-daece673e556" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c11d3550-6fe1-4669-8e69-e2b18da6ffe1" />
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="505a2dd5-aa7d-4f82-94c0-50a218ab5b11" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bdd561fd-200a-478d-9010-9c3524979d0e" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="bf669967-fd4c-4799-8d61-e8f167de2aa7" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2f904313-b81b-4cab-a7d2-52c67d9f7a24" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="7817102b-da07-4895-96c0-541834a99b12" name="ModelingProject">
+    <elementDefinition Id="8e320b84-6760-4d0a-aecd-56b84cf17914" />
+  </package>
+</componentModel>

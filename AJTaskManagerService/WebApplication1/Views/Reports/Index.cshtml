@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Index</h2>*@
+
+@using (Html.BeginForm())
+{
+    @*<p>
+            Find by name: @Html.TextBox("chartType")
+            <input type="submit" value="generate"/>
+        </p>
+        <p>
+            @Html.CheckBox("checkBox")
+        </p>*@
+
+
+    @*<div>
+            <img src="@Url.Action("GetRainfallChart")" height="600" alt="Drawing chart with HTML Helper"/>
+        </div>
+
+        <div>
+            <img src="@Url.Action("GetBarChart")" height="600" alt="Drawing chart with HTML Helper"/>
+        </div>
+
+        <div>
+            <img src="@Url.Action("GetColumnChart")" height="600" alt="Drawing chart with HTML Helper"/>
+        </div>
+
+        <div>
+            <img src="@Url.Action("GetLineChart")" height="600" alt="Drawing chart with HTML Helper"/>
+        </div>
+
+        <div>
+            <img src="@Url.Action("GetStockChart")" height="600" alt="Drawing chart with HTML Helper"/>
+        </div>
+
+        <div>
+            <img src="@Url.Action("GetAreaChart")" height="600" alt="Drawing chart with HTML Helper"/>
+        </div>*@
+
+    <div>
+        <br />
+    </div>
+
+    <script>
+        $.ajax({
+            url: '@Url.Action("GetPieChart", new { fromDatePie = ViewBag.FromDatePie, toDatePie = ViewBag.ToDatePie })',
+            type: 'GET',
+            dataType: "image/gif",
+            success: function (data) {
+                $('#pieChart').attr('src', data);
+            },
+            error: function (err) {
+                alert(err);
+            }
+        });
+    </script>
+
+    <div class="text-center">
+        <p>
+            @{
+    string fromDatePie = ViewBag.FromDatePie;
+    string toDatePie = ViewBag.ToDatePie;
+    <input class="text-box single-line" data-val="true" data-val-date="The field From Date must be a date." data-val-required="The From Date field is required." id="FromDatePie" name="FromDatePie" type="date" value="@fromDatePie">
+                <input class="text-box single-line" data-val="true" data-val-date="The field To Date must be a date." data-val-required="The To Date field is required." id="ToDatePie" name="ToDatePie" type="date" value="@toDatePie">
+                <input type="submit" value="generate" />
+            }
+        </p>
+        @{
+    //string pieImage = Url.Action("GetPieChart", new { fromDatePie = ViewBag.FromDatePie, toDatePie = ViewBag.ToDatePie });
+    <img id="pieChart" alt="Chart" height="400"  />
+        }
+    </div>
+
+    @*<div class="text-center">
+            <p>
+                @{
+        string fromDateWork = ViewBag.FromDatePie;
+        string toDateWork = ViewBag.ToDatePie;
+        <input class="text-box single-line" data-val="true" data-val-date="The field From Date must be a date." data-val-required="The From Date field is required." id="FromDateWorks" name="FromDateWorks" type="date" value="@fromDateWork">
+                    <input class="text-box single-line" data-val="true" data-val-date="The field To Date must be a date." data-val-required="The To Date field is required." id="ToDateWorks" name="ToDateWorks" type="date" value="@toDateWork">
+                    <input type="submit" value="generate" />
+                }
+            </p>
+            @{
+        string worksImg = Url.Action("GetChart", new { type = ViewBag.Type });
+        <img src="@worksImg" alt="Chart" height="400" />
+            }
+        </div>*@
+}

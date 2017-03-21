@@ -1,0 +1,1071 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model4.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ExternalUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+          <Property Name="UserDomainId" Type="nvarchar" MaxLength="128" />
+          <Property Name="ExternalUserId" Type="nvarchar(max)" />
+          <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Groups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="GroupName" Type="nvarchar(max)" />
+          <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RoleTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar(max)" />
+          <Property Name="RoleKey" Type="int" Nullable="false" />
+          <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaskItems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="TaskStatusId" Type="nvarchar" MaxLength="128" />
+          <Property Name="GroupId" Type="nvarchar" MaxLength="128" />
+          <Property Name="StartDateTime" Type="datetime" />
+          <Property Name="EndDateTime" Type="datetime" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="IsCompleted" Type="bit" Nullable="false" />
+          <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaskStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Status" Type="nvarchar(max)" />
+          <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaskSubitems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="TaskItemId" Type="nvarchar" MaxLength="128" />
+          <Property Name="TaskStatusId" Type="nvarchar" MaxLength="128" />
+          <Property Name="StartDateTime" Type="datetime" />
+          <Property Name="EndDateTime" Type="datetime" />
+          <Property Name="EstimationInHours" Type="float" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="PredecessorId" Type="nvarchar(max)" />
+          <Property Name="SuccessorId" Type="nvarchar(max)" />
+          <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+          <Property Name="IsCompleted" Type="bit" Nullable="false" />
+          <Property Name="ExecutorId" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="TaskSubitemWorks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar(max)" />
+          <Property Name="TaskSubitemId" Type="nvarchar" MaxLength="128" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+          <Property Name="StartDateTime" Type="datetime" Nullable="false" />
+          <Property Name="EndDateTime" Type="datetime" />
+          <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TodoItems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Text" Type="nvarchar(max)" />
+          <Property Name="IsCompleted" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="CreatedDateTime" Type="datetime" Nullable="false" />
+          <Property Name="Deadline" Type="datetime" Nullable="false" />
+          <Property Name="TodoListId" Type="nvarchar" MaxLength="128" />
+          <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TodoLists">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ListName" Type="nvarchar(max)" />
+          <Property Name="IsCompleted" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="GroupId" Type="nvarchar" MaxLength="128" />
+          <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserDomains">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="DomainKey" Type="int" Nullable="false" />
+          <Property Name="UserDomainName" Type="nvarchar(max)" />
+          <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+          <Property Name="GroupId" Type="nvarchar" MaxLength="128" />
+          <Property Name="RoleTypeId" Type="nvarchar" MaxLength="128" />
+          <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+          <Property Name="IsUserDefaultGroup" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+          <Property Name="Deleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_UserDomains_UserDomainId">
+          <End Role="UserDomains" Type="Self.UserDomains" Multiplicity="0..1" />
+          <End Role="ExternalUsers" Type="Self.ExternalUsers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserDomains">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ExternalUsers">
+              <PropertyRef Name="UserDomainId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_Users_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="ExternalUsers" Type="Self.ExternalUsers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ExternalUsers">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskItems_AJTaskManagerService_Groups_GroupId">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="TaskItems" Type="Self.TaskItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskItems">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskItems_AJTaskManagerService_TaskStatus_TaskStatusId">
+          <End Role="TaskStatus" Type="Self.TaskStatus" Multiplicity="0..1" />
+          <End Role="TaskItems" Type="Self.TaskItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaskStatus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskItems">
+              <PropertyRef Name="TaskStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskItems_TaskItemId">
+          <End Role="TaskItems" Type="Self.TaskItems" Multiplicity="0..1" />
+          <End Role="TaskSubitems" Type="Self.TaskSubitems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaskItems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSubitems">
+              <PropertyRef Name="TaskItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskStatus_TaskStatusId">
+          <End Role="TaskStatus" Type="Self.TaskStatus" Multiplicity="0..1" />
+          <End Role="TaskSubitems" Type="Self.TaskSubitems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaskStatus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSubitems">
+              <PropertyRef Name="TaskStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_Users_ExecutorId">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="TaskSubitems" Type="Self.TaskSubitems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSubitems">
+              <PropertyRef Name="ExecutorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_TaskSubitems_TaskSubitemId">
+          <End Role="TaskSubitems" Type="Self.TaskSubitems" Multiplicity="0..1" />
+          <End Role="TaskSubitemWorks" Type="Self.TaskSubitemWorks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaskSubitems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSubitemWorks">
+              <PropertyRef Name="TaskSubitemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_Users_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="TaskSubitemWorks" Type="Self.TaskSubitemWorks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSubitemWorks">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TodoItems_AJTaskManagerService_TodoLists_TodoListId">
+          <End Role="TodoLists" Type="Self.TodoLists" Multiplicity="0..1" />
+          <End Role="TodoItems" Type="Self.TodoItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TodoLists">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TodoItems">
+              <PropertyRef Name="TodoListId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TodoLists_AJTaskManagerService_Groups_GroupId">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="TodoLists" Type="Self.TodoLists" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TodoLists">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Groups_GroupId">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="UserGroups" Type="Self.UserGroups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserGroups">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_UserGroups_AJTaskManagerService_RoleTypes_RoleTypeId">
+          <End Role="RoleTypes" Type="Self.RoleTypes" Multiplicity="0..1" />
+          <End Role="UserGroups" Type="Self.UserGroups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoleTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserGroups">
+              <PropertyRef Name="RoleTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Users_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="UserGroups" Type="Self.UserGroups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserGroups">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Model4StoreContainer">
+          <EntitySet Name="ExternalUsers" EntityType="Self.ExternalUsers" Schema="AJTaskManagerService" store:Type="Tables" />
+          <EntitySet Name="Groups" EntityType="Self.Groups" Schema="AJTaskManagerService" store:Type="Tables" />
+          <EntitySet Name="RoleTypes" EntityType="Self.RoleTypes" Schema="AJTaskManagerService" store:Type="Tables" />
+          <EntitySet Name="TaskItems" EntityType="Self.TaskItems" Schema="AJTaskManagerService" store:Type="Tables" />
+          <EntitySet Name="TaskStatus" EntityType="Self.TaskStatus" Schema="AJTaskManagerService" store:Type="Tables" />
+          <EntitySet Name="TaskSubitems" EntityType="Self.TaskSubitems" Schema="AJTaskManagerService" store:Type="Tables" />
+          <EntitySet Name="TaskSubitemWorks" EntityType="Self.TaskSubitemWorks" Schema="AJTaskManagerService" store:Type="Tables" />
+          <EntitySet Name="TodoItems" EntityType="Self.TodoItems" Schema="AJTaskManagerService" store:Type="Tables" />
+          <EntitySet Name="TodoLists" EntityType="Self.TodoLists" Schema="AJTaskManagerService" store:Type="Tables" />
+          <EntitySet Name="UserDomains" EntityType="Self.UserDomains" Schema="AJTaskManagerService" store:Type="Tables" />
+          <EntitySet Name="UserGroups" EntityType="Self.UserGroups" Schema="AJTaskManagerService" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="AJTaskManagerService" store:Type="Tables" />
+          <AssociationSet Name="FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_UserDomains_UserDomainId" Association="Self.FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_UserDomains_UserDomainId">
+            <End Role="UserDomains" EntitySet="UserDomains" />
+            <End Role="ExternalUsers" EntitySet="ExternalUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_Users_UserId" Association="Self.FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_Users_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ExternalUsers" EntitySet="ExternalUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskItems_AJTaskManagerService_Groups_GroupId" Association="Self.FK_AJTaskManagerService_TaskItems_AJTaskManagerService_Groups_GroupId">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="TaskItems" EntitySet="TaskItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskItems_AJTaskManagerService_TaskStatus_TaskStatusId" Association="Self.FK_AJTaskManagerService_TaskItems_AJTaskManagerService_TaskStatus_TaskStatusId">
+            <End Role="TaskStatus" EntitySet="TaskStatus" />
+            <End Role="TaskItems" EntitySet="TaskItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskItems_TaskItemId" Association="Self.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskItems_TaskItemId">
+            <End Role="TaskItems" EntitySet="TaskItems" />
+            <End Role="TaskSubitems" EntitySet="TaskSubitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskStatus_TaskStatusId" Association="Self.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskStatus_TaskStatusId">
+            <End Role="TaskStatus" EntitySet="TaskStatus" />
+            <End Role="TaskSubitems" EntitySet="TaskSubitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_Users_ExecutorId" Association="Self.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_Users_ExecutorId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TaskSubitems" EntitySet="TaskSubitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_TaskSubitems_TaskSubitemId" Association="Self.FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_TaskSubitems_TaskSubitemId">
+            <End Role="TaskSubitems" EntitySet="TaskSubitems" />
+            <End Role="TaskSubitemWorks" EntitySet="TaskSubitemWorks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_Users_UserId" Association="Self.FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_Users_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TaskSubitemWorks" EntitySet="TaskSubitemWorks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TodoItems_AJTaskManagerService_TodoLists_TodoListId" Association="Self.FK_AJTaskManagerService_TodoItems_AJTaskManagerService_TodoLists_TodoListId">
+            <End Role="TodoLists" EntitySet="TodoLists" />
+            <End Role="TodoItems" EntitySet="TodoItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TodoLists_AJTaskManagerService_Groups_GroupId" Association="Self.FK_AJTaskManagerService_TodoLists_AJTaskManagerService_Groups_GroupId">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="TodoLists" EntitySet="TodoLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Groups_GroupId" Association="Self.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Groups_GroupId">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="UserGroups" EntitySet="UserGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_UserGroups_AJTaskManagerService_RoleTypes_RoleTypeId" Association="Self.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_RoleTypes_RoleTypeId">
+            <End Role="RoleTypes" EntitySet="RoleTypes" />
+            <End Role="UserGroups" EntitySet="UserGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Users_UserId" Association="Self.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Users_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserGroups" EntitySet="UserGroups" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model4" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ExternalUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserDomainId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ExternalUserId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedAt" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="UserDomains" Relationship="Self.FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_UserDomains_UserDomainId" FromRole="ExternalUsers" ToRole="UserDomains" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_Users_UserId" FromRole="ExternalUsers" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Groups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GroupName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedAt" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="TaskItems" Relationship="Self.FK_AJTaskManagerService_TaskItems_AJTaskManagerService_Groups_GroupId" FromRole="Groups" ToRole="TaskItems" />
+          <NavigationProperty Name="TodoLists" Relationship="Self.FK_AJTaskManagerService_TodoLists_AJTaskManagerService_Groups_GroupId" FromRole="Groups" ToRole="TodoLists" />
+          <NavigationProperty Name="UserGroups" Relationship="Self.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Groups_GroupId" FromRole="Groups" ToRole="UserGroups" />
+        </EntityType>
+        <EntityType Name="RoleTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RoleKey" Type="Int32" Nullable="false" />
+          <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedAt" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="UserGroups" Relationship="Self.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_RoleTypes_RoleTypeId" FromRole="RoleTypes" ToRole="UserGroups" />
+        </EntityType>
+        <EntityType Name="TaskItems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TaskStatusId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="GroupId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="StartDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EndDateTime" Type="DateTime" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
+          <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedAt" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK_AJTaskManagerService_TaskItems_AJTaskManagerService_Groups_GroupId" FromRole="TaskItems" ToRole="Groups" />
+          <NavigationProperty Name="TaskStatus" Relationship="Self.FK_AJTaskManagerService_TaskItems_AJTaskManagerService_TaskStatus_TaskStatusId" FromRole="TaskItems" ToRole="TaskStatus" />
+          <NavigationProperty Name="TaskSubitems" Relationship="Self.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskItems_TaskItemId" FromRole="TaskItems" ToRole="TaskSubitems" />
+        </EntityType>
+        <EntityType Name="TaskStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedAt" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="TaskItems" Relationship="Self.FK_AJTaskManagerService_TaskItems_AJTaskManagerService_TaskStatus_TaskStatusId" FromRole="TaskStatus" ToRole="TaskItems" />
+          <NavigationProperty Name="TaskSubitems" Relationship="Self.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskStatus_TaskStatusId" FromRole="TaskStatus" ToRole="TaskSubitems" />
+        </EntityType>
+        <EntityType Name="TaskSubitems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TaskItemId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="TaskStatusId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="StartDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EndDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EstimationInHours" Type="Double" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="PredecessorId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SuccessorId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedAt" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
+          <Property Name="ExecutorId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TaskItems" Relationship="Self.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskItems_TaskItemId" FromRole="TaskSubitems" ToRole="TaskItems" />
+          <NavigationProperty Name="TaskStatus" Relationship="Self.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskStatus_TaskStatusId" FromRole="TaskSubitems" ToRole="TaskStatus" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_Users_ExecutorId" FromRole="TaskSubitems" ToRole="Users" />
+          <NavigationProperty Name="TaskSubitemWorks" Relationship="Self.FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_TaskSubitems_TaskSubitemId" FromRole="TaskSubitems" ToRole="TaskSubitemWorks" />
+        </EntityType>
+        <EntityType Name="TaskSubitemWorks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TaskSubitemId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="StartDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndDateTime" Type="DateTime" Precision="3" />
+          <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedAt" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="TaskSubitems" Relationship="Self.FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_TaskSubitems_TaskSubitemId" FromRole="TaskSubitemWorks" ToRole="TaskSubitems" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_Users_UserId" FromRole="TaskSubitemWorks" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="TodoItems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Deadline" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TodoListId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedAt" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="TodoLists" Relationship="Self.FK_AJTaskManagerService_TodoItems_AJTaskManagerService_TodoLists_TodoListId" FromRole="TodoItems" ToRole="TodoLists" />
+        </EntityType>
+        <EntityType Name="TodoLists">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ListName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="GroupId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedAt" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK_AJTaskManagerService_TodoLists_AJTaskManagerService_Groups_GroupId" FromRole="TodoLists" ToRole="Groups" />
+          <NavigationProperty Name="TodoItems" Relationship="Self.FK_AJTaskManagerService_TodoItems_AJTaskManagerService_TodoLists_TodoListId" FromRole="TodoLists" ToRole="TodoItems" />
+        </EntityType>
+        <EntityType Name="UserDomains">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DomainKey" Type="Int32" Nullable="false" />
+          <Property Name="UserDomainName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedAt" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ExternalUsers" Relationship="Self.FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_UserDomains_UserDomainId" FromRole="UserDomains" ToRole="ExternalUsers" />
+        </EntityType>
+        <EntityType Name="UserGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="GroupId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="RoleTypeId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedAt" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <Property Name="IsUserDefaultGroup" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Groups" Relationship="Self.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Groups_GroupId" FromRole="UserGroups" ToRole="Groups" />
+          <NavigationProperty Name="RoleTypes" Relationship="Self.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_RoleTypes_RoleTypeId" FromRole="UserGroups" ToRole="RoleTypes" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Users_UserId" FromRole="UserGroups" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CreatedAt" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTimeOffset" Precision="7" />
+          <Property Name="Deleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ExternalUsers" Relationship="Self.FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_Users_UserId" FromRole="Users" ToRole="ExternalUsers" />
+          <NavigationProperty Name="TaskSubitems" Relationship="Self.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_Users_ExecutorId" FromRole="Users" ToRole="TaskSubitems" />
+          <NavigationProperty Name="TaskSubitemWorks" Relationship="Self.FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_Users_UserId" FromRole="Users" ToRole="TaskSubitemWorks" />
+          <NavigationProperty Name="UserGroups" Relationship="Self.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Users_UserId" FromRole="Users" ToRole="UserGroups" />
+        </EntityType>
+        <Association Name="FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_UserDomains_UserDomainId">
+          <End Role="UserDomains" Type="Self.UserDomains" Multiplicity="0..1" />
+          <End Role="ExternalUsers" Type="Self.ExternalUsers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserDomains">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ExternalUsers">
+              <PropertyRef Name="UserDomainId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_Users_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="ExternalUsers" Type="Self.ExternalUsers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ExternalUsers">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskItems_AJTaskManagerService_Groups_GroupId">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="TaskItems" Type="Self.TaskItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskItems">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TodoLists_AJTaskManagerService_Groups_GroupId">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="TodoLists" Type="Self.TodoLists" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TodoLists">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Groups_GroupId">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="UserGroups" Type="Self.UserGroups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserGroups">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_UserGroups_AJTaskManagerService_RoleTypes_RoleTypeId">
+          <End Role="RoleTypes" Type="Self.RoleTypes" Multiplicity="0..1" />
+          <End Role="UserGroups" Type="Self.UserGroups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoleTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserGroups">
+              <PropertyRef Name="RoleTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskItems_AJTaskManagerService_TaskStatus_TaskStatusId">
+          <End Role="TaskStatus" Type="Self.TaskStatus" Multiplicity="0..1" />
+          <End Role="TaskItems" Type="Self.TaskItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaskStatus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskItems">
+              <PropertyRef Name="TaskStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskItems_TaskItemId">
+          <End Role="TaskItems" Type="Self.TaskItems" Multiplicity="0..1" />
+          <End Role="TaskSubitems" Type="Self.TaskSubitems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaskItems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSubitems">
+              <PropertyRef Name="TaskItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskStatus_TaskStatusId">
+          <End Role="TaskStatus" Type="Self.TaskStatus" Multiplicity="0..1" />
+          <End Role="TaskSubitems" Type="Self.TaskSubitems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaskStatus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSubitems">
+              <PropertyRef Name="TaskStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_Users_ExecutorId">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="TaskSubitems" Type="Self.TaskSubitems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSubitems">
+              <PropertyRef Name="ExecutorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_TaskSubitems_TaskSubitemId">
+          <End Role="TaskSubitems" Type="Self.TaskSubitems" Multiplicity="0..1" />
+          <End Role="TaskSubitemWorks" Type="Self.TaskSubitemWorks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaskSubitems">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSubitemWorks">
+              <PropertyRef Name="TaskSubitemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_Users_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="TaskSubitemWorks" Type="Self.TaskSubitemWorks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSubitemWorks">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_TodoItems_AJTaskManagerService_TodoLists_TodoListId">
+          <End Role="TodoLists" Type="Self.TodoLists" Multiplicity="0..1" />
+          <End Role="TodoItems" Type="Self.TodoItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TodoLists">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TodoItems">
+              <PropertyRef Name="TodoListId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Users_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="UserGroups" Type="Self.UserGroups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserGroups">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ExternalUsers" EntityType="Self.ExternalUsers" />
+          <EntitySet Name="Groups" EntityType="Self.Groups" />
+          <EntitySet Name="RoleTypes" EntityType="Self.RoleTypes" />
+          <EntitySet Name="TaskItems" EntityType="Self.TaskItems" />
+          <EntitySet Name="TaskStatus" EntityType="Self.TaskStatus" />
+          <EntitySet Name="TaskSubitems" EntityType="Self.TaskSubitems" />
+          <EntitySet Name="TaskSubitemWorks" EntityType="Self.TaskSubitemWorks" />
+          <EntitySet Name="TodoItems" EntityType="Self.TodoItems" />
+          <EntitySet Name="TodoLists" EntityType="Self.TodoLists" />
+          <EntitySet Name="UserDomains" EntityType="Self.UserDomains" />
+          <EntitySet Name="UserGroups" EntityType="Self.UserGroups" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <AssociationSet Name="FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_UserDomains_UserDomainId" Association="Self.FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_UserDomains_UserDomainId">
+            <End Role="UserDomains" EntitySet="UserDomains" />
+            <End Role="ExternalUsers" EntitySet="ExternalUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_Users_UserId" Association="Self.FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_Users_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ExternalUsers" EntitySet="ExternalUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskItems_AJTaskManagerService_Groups_GroupId" Association="Self.FK_AJTaskManagerService_TaskItems_AJTaskManagerService_Groups_GroupId">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="TaskItems" EntitySet="TaskItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TodoLists_AJTaskManagerService_Groups_GroupId" Association="Self.FK_AJTaskManagerService_TodoLists_AJTaskManagerService_Groups_GroupId">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="TodoLists" EntitySet="TodoLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Groups_GroupId" Association="Self.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Groups_GroupId">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="UserGroups" EntitySet="UserGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_UserGroups_AJTaskManagerService_RoleTypes_RoleTypeId" Association="Self.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_RoleTypes_RoleTypeId">
+            <End Role="RoleTypes" EntitySet="RoleTypes" />
+            <End Role="UserGroups" EntitySet="UserGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskItems_AJTaskManagerService_TaskStatus_TaskStatusId" Association="Self.FK_AJTaskManagerService_TaskItems_AJTaskManagerService_TaskStatus_TaskStatusId">
+            <End Role="TaskStatus" EntitySet="TaskStatus" />
+            <End Role="TaskItems" EntitySet="TaskItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskItems_TaskItemId" Association="Self.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskItems_TaskItemId">
+            <End Role="TaskItems" EntitySet="TaskItems" />
+            <End Role="TaskSubitems" EntitySet="TaskSubitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskStatus_TaskStatusId" Association="Self.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskStatus_TaskStatusId">
+            <End Role="TaskStatus" EntitySet="TaskStatus" />
+            <End Role="TaskSubitems" EntitySet="TaskSubitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_Users_ExecutorId" Association="Self.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_Users_ExecutorId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TaskSubitems" EntitySet="TaskSubitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_TaskSubitems_TaskSubitemId" Association="Self.FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_TaskSubitems_TaskSubitemId">
+            <End Role="TaskSubitems" EntitySet="TaskSubitems" />
+            <End Role="TaskSubitemWorks" EntitySet="TaskSubitemWorks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_Users_UserId" Association="Self.FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_Users_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TaskSubitemWorks" EntitySet="TaskSubitemWorks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_TodoItems_AJTaskManagerService_TodoLists_TodoListId" Association="Self.FK_AJTaskManagerService_TodoItems_AJTaskManagerService_TodoLists_TodoListId">
+            <End Role="TodoLists" EntitySet="TodoLists" />
+            <End Role="TodoItems" EntitySet="TodoItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Users_UserId" Association="Self.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Users_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserGroups" EntitySet="UserGroups" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Model4StoreContainer" CdmEntityContainer="Entities3">
+          <EntitySetMapping Name="ExternalUsers">
+            <EntityTypeMapping TypeName="Model4.ExternalUsers">
+              <MappingFragment StoreEntitySet="ExternalUsers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserDomainId" ColumnName="UserDomainId" />
+                <ScalarProperty Name="ExternalUserId" ColumnName="ExternalUserId" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Groups">
+            <EntityTypeMapping TypeName="Model4.Groups">
+              <MappingFragment StoreEntitySet="Groups">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleTypes">
+            <EntityTypeMapping TypeName="Model4.RoleTypes">
+              <MappingFragment StoreEntitySet="RoleTypes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleKey" ColumnName="RoleKey" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaskItems">
+            <EntityTypeMapping TypeName="Model4.TaskItems">
+              <MappingFragment StoreEntitySet="TaskItems">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="TaskStatusId" ColumnName="TaskStatusId" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+                <ScalarProperty Name="EndDateTime" ColumnName="EndDateTime" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaskStatus">
+            <EntityTypeMapping TypeName="Model4.TaskStatus">
+              <MappingFragment StoreEntitySet="TaskStatus">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaskSubitems">
+            <EntityTypeMapping TypeName="Model4.TaskSubitems">
+              <MappingFragment StoreEntitySet="TaskSubitems">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="TaskItemId" ColumnName="TaskItemId" />
+                <ScalarProperty Name="TaskStatusId" ColumnName="TaskStatusId" />
+                <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+                <ScalarProperty Name="EndDateTime" ColumnName="EndDateTime" />
+                <ScalarProperty Name="EstimationInHours" ColumnName="EstimationInHours" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="PredecessorId" ColumnName="PredecessorId" />
+                <ScalarProperty Name="SuccessorId" ColumnName="SuccessorId" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+                <ScalarProperty Name="ExecutorId" ColumnName="ExecutorId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaskSubitemWorks">
+            <EntityTypeMapping TypeName="Model4.TaskSubitemWorks">
+              <MappingFragment StoreEntitySet="TaskSubitemWorks">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="TaskSubitemId" ColumnName="TaskSubitemId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+                <ScalarProperty Name="EndDateTime" ColumnName="EndDateTime" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TodoItems">
+            <EntityTypeMapping TypeName="Model4.TodoItems">
+              <MappingFragment StoreEntitySet="TodoItems">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+                <ScalarProperty Name="TodoListId" ColumnName="TodoListId" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TodoLists">
+            <EntityTypeMapping TypeName="Model4.TodoLists">
+              <MappingFragment StoreEntitySet="TodoLists">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ListName" ColumnName="ListName" />
+                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserDomains">
+            <EntityTypeMapping TypeName="Model4.UserDomains">
+              <MappingFragment StoreEntitySet="UserDomains">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DomainKey" ColumnName="DomainKey" />
+                <ScalarProperty Name="UserDomainName" ColumnName="UserDomainName" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserGroups">
+            <EntityTypeMapping TypeName="Model4.UserGroups">
+              <MappingFragment StoreEntitySet="UserGroups">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="RoleTypeId" ColumnName="RoleTypeId" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="IsUserDefaultGroup" ColumnName="IsUserDefaultGroup" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Model4.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

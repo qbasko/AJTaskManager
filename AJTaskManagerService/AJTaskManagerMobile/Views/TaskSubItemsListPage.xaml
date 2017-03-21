@@ -1,0 +1,119 @@
+﻿<common:BindablePage xmlns:Input="using:Syncfusion.UI.Xaml.Controls.Input" 
+    x:Class="AJTaskManagerMobile.Views.TaskSubItemsListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AJTaskManagerMobile.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:common="using:AJTaskManagerMobile.Common"
+    xmlns:notification="using:Syncfusion.UI.Xaml.Controls.Notification"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding TaskSubitemsListViewModel, Source={StaticResource Locator}}"
+    Name="TaskSubitemsList">
+
+    <Page.BottomAppBar>
+        <CommandBar AllowDrop="True" Background="SaddleBrown">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Label="Add" Command="{Binding AddNewItemCommand}">
+                    <AppBarButton.Icon>
+                        <BitmapIcon UriSource="ms-appx:///Assets/Icons/Dark/add.png" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton Label="Delete" Command="{Binding DeleteCompletedCommand}">
+                    <AppBarButton.Icon>
+                        <BitmapIcon UriSource="ms-appx:///Assets/Icons/Dark/delete.png"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton Label="Refresh" Command="{Binding RefreshCommand}">
+                    <AppBarButton.Icon>
+                        <BitmapIcon UriSource="ms-appx:///Assets/Icons/Dark/refresh.png"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <ImageBrush x:Key="BackgroundImageBrush" ImageSource="../Assets/backgroundOnePage.png"/>
+                    <ImageBrush x:Key="ItemsBackgroundImageBrush" ImageSource="../Assets/ItemsBackground2.png"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrast">
+                    <ImageBrush x:Key="BackgroundImageBrush" ImageSource="{x:Null}"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ItemsBackgroundImageBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Left" FontSize="30"  Margin="10,35,100,0" TextWrapping="Wrap" Text="{Binding TaskName}" VerticalAlignment="Top"/>
+        <notification:SfBusyIndicator Grid.Row="1" IsBusy="{Binding IsBusy, Mode=TwoWay}"/>
+        <ListView Grid.Row="1" ItemsSource="{Binding TaskSubitems}" Margin="10,0,10,10" ShowsScrollingPlaceholders="True" IsItemClickEnabled="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Holding="GridHolding">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <FlyoutBase.AttachedFlyout>
+                                <MenuFlyout>
+                                    <MenuFlyoutItem Text="Open">
+                                        <interactivity:Interaction.Behaviors>
+                                            <core:EventTriggerBehavior EventName="Click">
+                                                <core:InvokeCommandAction Command="{Binding DataContext.NavigateToTaskSubitemWorkCommand, ElementName=TaskSubitemsList}" CommandParameter="{Binding}"/>
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
+                                    </MenuFlyoutItem>
+                                    <MenuFlyoutItem Text="Edit">
+                                        <interactivity:Interaction.Behaviors>
+                                            <core:EventTriggerBehavior EventName="Click">
+                                                <core:InvokeCommandAction Command="{Binding DataContext.NavigateToTaskSubItemCommand, ElementName=TaskSubitemsList}" CommandParameter="{Binding}"/>
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
+                                    </MenuFlyoutItem>
+                                    <MenuFlyoutItem Text="Delete">
+                                        <interactivity:Interaction.Behaviors>
+                                            <core:EventTriggerBehavior EventName="Click">
+                                                <core:InvokeCommandAction Command="{Binding DataContext.DeleteTaskSubitemCommand, ElementName=TaskSubitemsList}" CommandParameter="{Binding}"/>
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
+                                    </MenuFlyoutItem>
+                                </MenuFlyout>
+                            </FlyoutBase.AttachedFlyout>
+                            <CheckBox Grid.Column="0" Margin="0,0,0,0" IsChecked="{Binding IsCompleted, Mode=TwoWay}" VerticalAlignment="Center" Background="SaddleBrown">
+                                <interactivity:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="Checked">
+                                        <core:InvokeCommandAction Command="{Binding DataContext.CheckboxCheckedCommand, ElementName=TaskSubitemsList}"
+                                                                CommandParameter="{Binding}"/>
+                                    </core:EventTriggerBehavior>
+                                    <core:EventTriggerBehavior EventName="Unchecked">
+                                        <core:InvokeCommandAction Command="{Binding DataContext.CheckboxCheckedCommand, ElementName=TaskSubitemsList}"
+                                                                CommandParameter="{Binding}"/>
+                                    </core:EventTriggerBehavior>
+                                </interactivity:Interaction.Behaviors>
+                            </CheckBox>
+                            <TextBlock Grid.Column="0" Margin="35,15,0,0" Text="{Binding Name}" Foreground="SaddleBrown" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20">
+                            <interactivity:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="Tapped">
+                                    <core:InvokeCommandAction Command="{Binding DataContext.NavigateToTaskSubitemWorkCommand, ElementName=TaskSubitemsList}"
+                                                                CommandParameter="{Binding}"/>
+                                </core:EventTriggerBehavior>
+                            </interactivity:Interaction.Behaviors>
+                            </TextBlock>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</common:BindablePage>

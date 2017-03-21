@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="336c55a4-3986-42a1-8a30-c0b007ee9a51" name="TasksAndProjects" linkedPackageId="442b775d-1ba8-42a7-9bd1-5415914e805d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="1e4dac37-c555-46f7-9023-a31d46dabc38">
+      <profileInstance Id="0bc61d25-f88f-46ed-9904-eaa8ac6af04f" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="65e93219-ebf8-498e-a427-ff25063b4fa1">
+      <profileInstance Id="16d9e389-7012-4243-bdac-bafee8127ab9" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <useCase Id="01d68642-0de1-43f5-9477-acb39a824df2" name="Zadanie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7642c6f6-5c79-472c-ba0b-845b12224808" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="dd3ea420-e3b3-451d-9ff9-8bd7b3742989" name="Podzadanie 1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1e7412be-0b50-4179-92cc-2e236c0ed775" />
+        <targetEnds>
+          <association Id="f73a7a9d-713c-46fd-8cc4-d6e2b76e0d4c" isDerived="false" sourceEndRoleName="Podzadanie 1" targetEndRoleName="Zadanie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="01d68642-0de1-43f5-9477-acb39a824df2" LastKnownName="Zadanie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="057e1024-99c1-48fe-87fd-b00a984ffb4a" name="Podzadanie 1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6f5ba204-f2ab-49c3-8207-d24baa25aadd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="55f15795-ce75-4c9d-a2bd-52a296bdb549" name="Zadanie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="604772ae-d96a-463a-b21a-6a14c3b1ec5c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="82de2e72-cad6-4422-9c11-028fcda102b9" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="be860ff6-f1c2-4b73-929b-77f9f726a28c" name="Podzadanie N" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e7ee15be-4f40-480c-a112-56ccd38c52ac" />
+        <targetEnds>
+          <association Id="ef63a82b-8489-4867-9e76-fdc155e3a7f7" isDerived="false" sourceEndRoleName="Podzadanie N" targetEndRoleName="Zadanie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="01d68642-0de1-43f5-9477-acb39a824df2" LastKnownName="Zadanie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="103d4880-5827-499c-b627-d211a543d52b" name="Podzadanie N" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f48c7c3f-9ca0-4496-839c-8888b10b05eb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5946cec7-93a5-4506-8694-61069f23053f" name="Zadanie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="21721347-8ff2-45bd-a975-c69eea8a779a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="caefe013-5c31-42bc-89ae-83521928c8a5" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3ec75d69-46b3-435d-96c8-e46e518016cf" name="Projekt" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3e918fd4-4922-4279-9aaa-52cc0524b6b4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ce90435c-d4b5-4937-af97-67f5a4339e96" name="Działanie 1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f08bb4f0-f882-4eaf-bfac-80e14f01e8c7" />
+        <targetEnds>
+          <association Id="96b0b4bd-ae8a-480e-ac20-07dbf4d72aee" isDerived="false" sourceEndRoleName="Podzadanie 1" targetEndRoleName="Zadanie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3ec75d69-46b3-435d-96c8-e46e518016cf" LastKnownName="Projekt" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b5df406f-4519-4ec2-a2b0-a3c73c948337" name="Podzadanie 1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="36b0225d-1c5d-4ad8-9cb5-6d1f5a6c5361" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7d905961-0c57-41df-98bd-3e7a1e3643fd" name="Zadanie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9e882e76-7440-4161-898b-646f6e10765d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a978588c-78ea-44d3-bf68-a9aad613cd6b" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f6b87165-8097-454a-9347-97e9d9b61006" name="Działanie N" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f48a176c-b697-4064-a9ca-ca39be5a2c4e" />
+        <targetEnds>
+          <association Id="e5926a96-79c3-4014-9626-adb7fe000647" isDerived="false" sourceEndRoleName="Podzadanie N" targetEndRoleName="Zadanie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3ec75d69-46b3-435d-96c8-e46e518016cf" LastKnownName="Projekt" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8e7301d1-74b3-402a-9323-a61acbc18083" name="Podzadanie N" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bdce013b-d0ca-48fd-b14d-45381444be4e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="79221347-5526-4c33-8e54-683c305418dd" name="Zadanie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5df26aa5-a50c-4ca1-9a88-16cd3eaf8279" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a4456dcc-4284-48a2-89fd-43a70be87095" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="442b775d-1ba8-42a7-9bd1-5415914e805d" name="ModelingProject">
+    <elementDefinition Id="8e320b84-6760-4d0a-aecd-56b84cf17914" />
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="29ad7dee45f24758970559ea526a8fe9" Name="Diagram1" ShowGrid="true" SnapToGrid="true" DisplayType="false">
+        <EntityTypeShape EntityType="Model4.ExternalUsers" Width="1.5" PointX="5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model4.Groups" Width="1.5" PointX="7.125" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model4.RoleTypes" Width="1.5" PointX="5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model4.TaskItems" Width="1.5" PointX="2.875" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model4.TaskStatus" Width="1.5" PointX="2.875" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model4.TaskSubitems" Width="1.625" PointX="0.625" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model4.TaskSubitemWorks" Width="1.75" PointX="0.625" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model4.TodoItems" Width="1.5" PointX="7.125" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model4.TodoLists" Width="1.5" PointX="5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model4.UserDomains" Width="1.75" PointX="7.125" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model4.UserGroups" Width="1.625" PointX="0.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model4.Users" Width="1.5" PointX="2.875" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_UserDomains_UserDomainId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_TaskItems_AJTaskManagerService_Groups_GroupId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_TodoLists_AJTaskManagerService_Groups_GroupId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Groups_GroupId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_RoleTypes_RoleTypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_TaskItems_AJTaskManagerService_TaskStatus_TaskStatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskItems_TaskItemId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskStatus_TaskStatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_Users_ExecutorId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_TaskSubitems_TaskSubitemId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_TodoItems_AJTaskManagerService_TodoLists_TodoListId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model4.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Users_UserId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

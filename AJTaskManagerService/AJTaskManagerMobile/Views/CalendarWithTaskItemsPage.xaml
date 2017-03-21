@@ -1,0 +1,115 @@
+﻿<common:BindablePage xmlns:Schedule="using:Syncfusion.UI.Xaml.Schedule"  xmlns:Input="using:Syncfusion.UI.Xaml.Controls.Input" 
+    x:Class="AJTaskManagerMobile.Views.CalendarWithTaskItemsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AJTaskManagerMobile.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:common="using:AJTaskManagerMobile.Common"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:notification="using:Syncfusion.UI.Xaml.Controls.Notification"
+    xmlns:controls="using:Syncfusion.UI.Xaml.Controls"
+    xmlns:converters="using:AJTaskManagerMobile.Common.Converters"
+    xmlns:models="using:AJTaskManagerMobile.Model"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Name="CalendarWithTaskItems">
+    
+    <!--DataContext="{Binding CalendarWithTaskItemsViewModel, Source={StaticResource Locator}}"-->
+    <UserControl.Resources>
+        <ImageBrush x:Key="BackgroundImageBrush" ImageSource="../Assets/backgroundOnePage.png"/>
+
+        <converters:TaskSubitemCellConverter x:Key="Converter"/>
+        <converters:DateConverter x:Key="DateConverter"/>
+        <converters:TaskSubitemCellDescConverter x:Key="DateDesConverter"/>
+        <models:CalendarTaskItem x:Key="CalendarTaskItems"/>
+
+        <DataTemplate x:Key="Celltemplate">
+            <Grid>
+                <TextBlock Text="{Binding Converter={StaticResource Converter}, ConverterParameter={StaticResource CalendarTaskItems}}" 
+					   VerticalAlignment="Top" HorizontalAlignment="Right"
+					   Margin="3" FontSize="5" TextWrapping="Wrap"/>
+                <TextBlock Text="{Binding Day}" 
+					   VerticalAlignment="Bottom"
+					   Margin="3"/>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+
+
+    <!--<Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <ImageBrush x:Key="BackgroundImageBrush" ImageSource="../Assets/backgroundOnePage.png"/>
+
+                    <converters:TaskItemCellConverter x:Key="Converter"/>
+                    <converters:DateConverter x:Key="DateConverter"/>
+                    <converters:TaskItemCellDescConverter x:Key="DateDesConverter"/>
+                    <models:CalendarTaskItem x:Key="CalendarTaskItems"/>
+
+                    <DataTemplate x:Key="Celltemplate">
+                        <Grid>
+                            <TextBlock Text="{Binding Converter={StaticResource Converter}, ConverterParameter={StaticResource CalendarTaskItems}}" 
+					   VerticalAlignment="Top" HorizontalAlignment="Right"
+					   Margin="3" FontSize="5" TextWrapping="Wrap"/>
+                            <TextBlock Text="{Binding Day}" 
+					   VerticalAlignment="Bottom"
+					   Margin="3"/>
+                        </Grid>
+                    </DataTemplate>
+
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>-->
+
+    <!--CellTemplate="{StaticResource Celltemplate}"-->
+
+    <Grid Background="{StaticResource BackgroundImageBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Input:SfCalendar  VerticalAlignment="Top"
+                          BorderThickness="0 1" Margin="5,0,5,0" Height="420" x:Name="Calendar">
+            <Input:SfCalendar.CellTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="{Binding Converter={StaticResource Converter}, ConverterParameter={StaticResource CalendarTaskItems}}" 
+					   VerticalAlignment="Top" HorizontalAlignment="Right"
+					   Margin="3" FontSize="5" TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding Day}" 
+					   VerticalAlignment="Bottom"
+					   Margin="3"/>
+                    </Grid>
+                </DataTemplate>
+            </Input:SfCalendar.CellTemplate>
+        </Input:SfCalendar>
+
+        <controls:TransitionContentControl Grid.Row="1" Margin="10,53,0,10" Content="{Binding ElementName=Calendar, Path=SelectedDate}">
+            <controls:TransitionContentControl.Transition>
+                <controls:FadeTransition />
+            </controls:TransitionContentControl.Transition>
+            <controls:TransitionContentControl.ContentTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding Converter={StaticResource DateConverter}}"
+									   FontSize="21" Margin="5"/>
+                        <TextBlock Text="{Binding Converter={StaticResource Converter}, ConverterParameter={StaticResource CalendarTaskItems}}"
+									   FontSize="28" Margin="5" Grid.Row="1" TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding Converter={StaticResource DateDesConverter}, ConverterParameter={StaticResource CalendarTaskItems}}"
+									   FontSize="22" Grid.Row="2" Margin="5 1"
+									   TextWrapping="Wrap" />
+                    </Grid>
+                </DataTemplate>
+            </controls:TransitionContentControl.ContentTemplate>
+        </controls:TransitionContentControl>
+    </Grid>
+</common:BindablePage>

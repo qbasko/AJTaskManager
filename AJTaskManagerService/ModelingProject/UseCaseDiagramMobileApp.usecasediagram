@@ -1,0 +1,1169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="41cadd3a-0b1f-44b9-954d-8c36c25b705c" name="UseCaseDiagramMobileApp" linkedPackageId="b145e9ce-0c34-49f9-b4e8-93a46b1a630d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="b92b41f2-44ea-40b4-87ae-fcf1aca3f230" name="Administrator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cee50bea-8e30-4159-a6a4-0b0623b684b5" />
+        <targetEnds>
+          <association Id="71f96c0f-1d78-4f4f-a06f-622232633637" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Logowanie użytkownika" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="37e58f89-b8bf-4591-b3a5-fec9292e0ed5" LastKnownName="Logowanie " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="10572283-d915-4c35-8d53-7ba07b0c0251" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="daa58a5e-50bf-4d79-b55b-4aaa7f67e26b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8fc49c97-2186-4645-9bfc-2023499dda79" name="Logowanie użytkownika" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="628c0beb-8d32-4ba1-ae42-c2391b9f81d4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="28c03a8a-46b2-44d7-9097-15cc67240b86" />
+          </association>
+          <association Id="8c93b2fa-71e8-4336-914e-ccdc8cd58f6a" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Tworzenie list kontrolnych" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ca7303bc-96a4-4454-bf39-9c9cb2655367" LastKnownName="Dodawanie zadania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dd370f57-0b6a-4646-8e5c-2a4fa58519da" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cec8e4ce-d2fa-45f1-811d-e4ca3590c700" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ff51fbf8-e4e5-49b0-83b8-917c4ba9a0cc" name="Tworzenie list kontrolnych" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="39a9b209-0248-4992-8232-e7bb2a5a1b1a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ea568d42-36d9-4ef1-a5d1-c103d74df64e" />
+          </association>
+          <association Id="c50c8e1c-4779-4e11-b815-f8d882757b85" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Wyświetlanie list kontrolnych" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f784a045-6d67-4a25-bc5b-c9473181fc4e" LastKnownName="Wyświetlanie listy zadań" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="026af371-25d2-41a0-aa55-b8dc3ef74e3e" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9fa011cf-d823-4196-bae0-ebcdb987b6cc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9da552e8-7a5e-447e-9b52-3dfe24112b7a" name="Wyświetlanie list kontrolnych" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="67297acc-9bec-470c-8121-6a02cc069a9a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="defef8de-9948-41f3-beea-80be072a9477" />
+          </association>
+          <association Id="d90d0d52-2562-4dbe-b769-c9dd2caa81ba" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Edytowanie listy kontrolnej" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="85081525-c3ac-4342-8031-bb3092299e94" LastKnownName="Edytowanie zadania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="305fea59-5ba6-4b84-82d7-18df7c01e4c5" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cf2dbc13-1386-4b0c-85fd-ed2857d600f1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6cd9bdcf-e342-46b4-a788-16ddad65c2a3" name="Edytowanie listy kontrolnej" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e4464f53-422b-4d00-b0b6-99f71bf6e312" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="04ccb5e6-cc59-4211-8600-a10d9421d1a5" />
+          </association>
+          <association Id="f2d226f9-08d8-4c03-a6ec-b7b4c82a2dac" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Usuwanie listy kontrolnej" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="dd0b8de2-bdd0-4590-ab05-d2d93d606e03" LastKnownName="Usuwanie zadania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="523ed1f3-46b4-41c7-9db2-7843f2070af2" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d3849aba-69a0-4b9b-b6e6-79c2046e8686" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e1243ca3-5427-46f8-a0b8-f93090129751" name="Usuwanie listy kontrolnej" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="036eb3cc-128f-4805-8c74-bcfa25e84eb6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5c90d6b0-dc80-4526-aa38-cc6a7d7b911c" />
+          </association>
+          <association Id="1e23196a-d40a-4fa3-91d8-93675529a36d" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Dodawanie elementu do wybranej listy kontrolnej" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ae8957ee-9c07-4918-942c-b6ea2f44f7b4" LastKnownName="Dodawanie podzadania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="159bd1da-970b-4840-aea7-2e1f786b2e68" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ca6b8441-be48-4f82-b32b-bcaa05ca8868" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f522d83b-d8d5-4eaf-9730-741a1bc7ebb0" name="Dodawanie elementu do wybranej listy kontrolnej" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="405d078a-b6ef-4ceb-9d0e-cf27f323d1af" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c8ee4f6b-b446-4b48-acbd-3eccc1027cff" />
+          </association>
+          <association Id="9750c2c9-b854-41fa-8b41-90ea81b5cc05" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Usuwanie elementu z wybranej listy kontrolnej" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b5951b9f-1afb-40a1-a163-e30b8a42bc44" LastKnownName="Usuwanie podzadania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6dae1e06-3f7d-4455-a3e5-c8a059912ed8" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fb1e06f4-8420-4d42-a0a8-466f08f1349b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="96393cef-aab8-4543-9310-2bdd1da0f724" name="Usuwanie elementu z wybranej listy kontrolnej" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="328b814e-03bb-4a40-b11e-5bf62d2f915e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3b2a06b8-36e7-403b-aa5c-a1ba47c534e7" />
+          </association>
+          <association Id="c10ada84-7c19-4ad7-9bc7-2d26a3c8903f" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Dodawanie zadania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2eea1809-40e1-49e9-90b0-e6347841c5ad" LastKnownName="Dodawanie projektu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8863e3c2-505f-4097-806b-c0719bc0f413" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e966d4c4-2448-48b0-9862-20ac35008388" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2b5e366f-8e06-4884-b948-77b87cf91329" name="Dodawanie zadania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e0190282-2254-453f-a0af-e5ad02505874" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="db550129-9364-4f89-bb69-dbcbbfb2bed8" />
+          </association>
+          <association Id="5f7321cb-dbe2-4bf7-8580-69178fb5e544" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Wyświetlanie listy zadań" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d887f2c2-80fe-4011-a26e-33496748db6f" LastKnownName="Wyświetlanie listy projektów" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e5059a0e-c5c8-4f50-aff6-b5becc505115" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="746898ef-1902-4edd-9e5e-5341c87bbadc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d5c92c9f-82ce-4cb4-8adc-9798829b95ee" name="Wyświetlanie listy zadań" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8d0a8476-1ce5-4bd6-bdee-df0872575453" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7409040c-1c0f-433a-ba3d-a312d582f13c" />
+          </association>
+          <association Id="dd137171-006e-49b0-bc70-ab78d73115f6" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Edytowanie zadania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="62a8ebb2-7196-41a1-9c6b-1fd3ba07dde3" LastKnownName="Edytowanie projektu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ca9935a8-3cd7-49e3-afb3-7dc6e15840b8" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="27db172b-7b6d-4051-ba4c-e01b8e977d89" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="436eba5c-4457-4b68-8986-2c5af0396b89" name="Edytowanie zadania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="33abc13b-51a8-4ece-a4ab-7e4c6d5da99d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="51731b4d-8c1c-45fe-b6e3-094c2d19528c" />
+          </association>
+          <association Id="a57b44b1-85b1-4bd3-bd46-6ade83e3b18e" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Usuwanie zadania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1842231f-8d01-4671-9f6c-eb62e44eede8" LastKnownName="Usuwanie projektu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bc56b8a6-0aa2-4547-a589-33afb17d928f" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3ab4ff55-538b-4bbb-aa4b-b9f9255d6556" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0e2909cb-d357-427b-a241-a5025e173a58" name="Usuwanie zadania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="072f19da-35a4-4687-8248-0846ac203438" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ca07785c-0fc3-4ea6-8138-573f200913db" />
+          </association>
+          <association Id="3504d948-ea4e-483d-bb8c-e11cc16cdd2a" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Wyświetlanie elementów z wybranej listy kontrolnej" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c6cb77fe-876d-4c3f-b80c-6a60366ee0cb" LastKnownName="Wyświetlanie listy podzadań" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f3e110a-eced-4920-a599-e5f71a0dbb47" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="10da2f4f-205e-47d2-aa2e-901e61cb50fd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e9ca630a-cb20-4dce-965e-8352d99e02eb" name="Wyświetlanie elementów z wybranej listy kontrolnej" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7fb03e08-efa3-455c-a610-473043df4e90" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="55f5b761-9856-425f-99c5-dad2f0fc240d" />
+          </association>
+          <association Id="d81bf08c-e66f-4099-88d3-00ee7dceb78b" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Dodawanie podzadania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="dcd31afc-1fdc-47b3-adc8-e8a5ff105b80" LastKnownName="Dodawanie działania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="58fe10b6-eb2f-481f-800a-2083e7a1cad5" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="83edb1c6-8ac8-4c6e-844e-3ea0899cf8fd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4995f38a-c853-4f6e-805b-8d3a9c28f5ec" name="Dodawanie podzadania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8172a1b6-75bd-4269-85d7-4c853e26dc23" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5f665413-9da3-4b42-aa31-4ffa5b3e2efd" />
+          </association>
+          <association Id="4c0b5098-5b1d-4a22-8156-9032e5ae0111" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Wyświetlanie listy podzadań" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bc4717a7-2a58-4326-90fc-9e6900ca0ee8" LastKnownName="Wyświetlanie listy działań" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a48f230a-a6d6-47da-9dee-63ab5bfec068" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b0b18aa1-f324-4ded-b56e-3f6cf7f25435" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ea016b97-3172-4d14-9224-1aaabd8f51e0" name="Wyświetlanie listy podzadań" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7e8de210-e486-48a3-9a4b-aa04b4bf7bdf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="feffb3d0-bba0-4426-96a7-52aa61037a55" />
+          </association>
+          <association Id="49a4a6ba-e8ca-4ab3-8ec7-3c3f6a4ff1ca" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Usuwanie podzadania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="11bb5041-5793-4662-a503-a37963c8b090" LastKnownName="Usuwanie działania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dab843f9-bb27-43ab-b32d-fc876b922915" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b02898b0-fd1a-402f-9697-749849e4b257" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7eecf765-6168-48b0-aea0-d1aa74469b85" name="Usuwanie podzadania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="be2981b4-5d29-48aa-92c6-543e3b7ddaf0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dc618ab2-46d8-4966-a7b9-b2231f94a8a9" />
+          </association>
+          <association Id="f3a8d438-8666-47ac-9b49-17a700a6ca7e" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Edytowanie podzadania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d6e58873-d5bc-45a3-a9b5-42c43d546165" LastKnownName="Edytowanie działania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2fd6368b-2c23-42ba-a4c5-f228ce97e5dc" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="956d45c5-959c-4393-b1c6-5507595191df" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="be0db666-3383-49c8-abc8-6ee32747de8f" name="Edytowanie podzadania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2f48293f-9765-4dcc-9a37-444f61a3390b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fb0b1d99-31aa-4a61-b32c-2c550fe0fa0d" />
+          </association>
+          <association Id="17aa8c7b-17b7-4901-b8c5-9ff4b9bb0280" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Uruchomienie licznika czasu pracy dla wybranego podzadania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="30d1f064-2804-44d1-9d1a-31238873f66f" LastKnownName="Uruchomienie licznika czasu pracy dla wybranego działania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="660d75cd-d2db-4e88-90f9-7388ba3ed742" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a4599bc6-4f64-42d2-a3bb-030d17c6464c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="54e41882-c18d-4391-b2a0-974e3550ba9e" name="Uruchomienie licznika czasu pracy dla wybranego podzadania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f41fcb1e-afe5-41c3-8df7-2dcc0a7dd751" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e96aeb21-15c1-4748-8e18-fc4d5957ba01" />
+          </association>
+          <association Id="cda6e155-65db-4823-a6f6-a7b2e53b963b" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Wyświetlanie listy prac dla wybranego podzadania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d830ee17-e7e0-42b7-a35b-767ab0002cf7" LastKnownName="Wyświetlanie listy prac dla wybranego działania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b3606d79-5411-4329-a258-c479d20338d3" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="510dda15-0290-43b1-8cb2-1ff7ca165027" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b5c46c9a-e3b9-42f5-84fe-1796e78239b6" name="Wyświetlanie listy prac dla wybranego podzadania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b29965d3-b3ac-411c-a1e5-a9960eb01c76" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="eaa59bfd-7a6f-4189-a191-138adb992b6f" />
+          </association>
+          <association Id="b658e408-baef-45ea-b33c-8cda4f84f2b1" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Wyświetlanie kalendarza z zaznaczonymi terminami ostatecznymi podzadań" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="aedd3fe7-01c4-48b1-a059-6cba43cd76e4" LastKnownName="Wyświetlanie kalendarza &#xD;&#xA;z zaznaczonymi datami zakończenia działań przypisanych do użytkownika" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4308f3e2-54ab-42db-8712-9b91799bb6d7" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="936f3c57-80bf-443c-9feb-1313d5d6d844" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a08aa4e7-5f2a-4aa9-b274-28ac0f4be92a" name="Wyświetlanie kalendarza z zaznaczonymi terminami ostatecznymi podzadań" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bbf25acb-932f-401c-805e-7fd84349a8f2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e5203e0b-06ff-4986-9699-002f22682b2f" />
+          </association>
+          <association Id="54143f86-4acc-4462-b54b-18d272bdc413" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Dodawanie grupy" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="01b38116-8f77-4ba4-bbb0-54e65a90fe26" LastKnownName="Dodawanie grupy" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c87bd47e-4471-4345-9582-760e4b679504" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="37873c6a-17df-4246-9830-7d1874be58c7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5e0fcc41-31bd-4ad4-9118-f25eed2b72fe" name="Dodawanie grupy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bab8ccd1-f11b-4e3f-83c4-0e7fc8e90489" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2416914c-bc2b-46cd-b3a2-efe32967e0d5" />
+          </association>
+          <association Id="3906efca-f1fd-41cb-85c3-6bffaf92d354" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Wyświetlanie grup użytkownika" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="60fab6ed-d7ac-440b-9ca3-110fb00038d1" LastKnownName="Wyświetlanie grup użytkownika" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c9031ef5-11f9-4274-9854-86838982e902" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="de071d8e-0574-4f87-bd12-eab0c1606b1d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9ae19756-d103-4a5f-ada2-78d20bd57c17" name="Wyświetlanie grup użytkownika" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bcfe3464-7dd0-44af-9394-da1ecac7431a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7e10dffd-7d61-49f9-8777-9d5538067dc4" />
+          </association>
+          <association Id="722d88ce-006c-4823-92b5-71959ab0b177" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Usuwanie grupy" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="86b4f33b-cf4d-46fa-b240-03e414de40a4" LastKnownName="Usuwanie grupy" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="25d68cdf-76a2-45be-beb8-68d4b20a85b3" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c344211a-5193-4902-95c3-6c8998f1f61f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="709a3493-ce8c-49af-a880-de67cda8ad7e" name="Usuwanie grupy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="911a8ba6-23bc-44d5-8209-7270c96e6f60" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2d02b749-8a6b-46e7-8ffb-225e9d0e6196" />
+          </association>
+          <association Id="7de0e3eb-72ce-4498-9151-9aa2704726b7" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Dodawanie użytkownika do wybranej grupy" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="69f99a43-14f7-4e8c-8739-0b58e06d90c2" LastKnownName="Dodawanie konta użytkownika do wybranej grupy" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d6031232-b1ba-4d63-8433-424d91e41fdd" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="96aadb94-dac9-4b00-ac50-23c9043a76f3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a17fced1-fb17-446a-910b-a79f50a92793" name="Dodawanie użytkownika do wybranej grupy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ffc63e42-9592-4081-b336-b5b0e9532101" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f14c2466-043b-4316-87ee-dd574482991e" />
+          </association>
+          <association Id="5f2d083f-1a22-423b-be20-e58b381b7076" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Usuwanie użytkownika do wybranej grupy" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ba03adbb-41be-4876-9e1d-d84f133954b8" LastKnownName="Usuwanie konta użytkownika &#xD;&#xA;z wybranej grupy" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="388d18e5-c52b-49db-8eee-403fee56bf2f" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="833ef1a2-d654-491a-b4c3-b936ce0adf10" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="34d04681-7978-4e7d-9d1f-452fd79ab19d" name="Usuwanie użytkownika do wybranej grupy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2a4afdca-481c-460e-a19a-ce388e825f98" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="71f2091f-a0f6-40f0-977b-22cc8f294493" />
+          </association>
+          <association Id="cb63cf80-15b7-41c2-8dca-bae8edb40ba0" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Ustawienie roli użytkownika w grupie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="db87bc79-9f00-4077-bd62-5ab47bf40150" LastKnownName="Ustawienie roli konta użytkownika w grupie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fb038a82-3859-4634-bdc7-3b46310428d3" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f8f40504-9ded-4ef1-a213-66bea08ff4d4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6fcc896e-534e-422d-8ad7-b46475ebe035" name="Ustawienie roli użytkownika w grupie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2f0595bc-dba4-4943-8137-6fbba6d5e5d2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bbe03e88-551c-4dbd-beaa-2039bf05c5ff" />
+          </association>
+          <association Id="abdfee06-07c8-4a22-b50a-37be9218e1ad" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Wyświetlanie użytkowników przypisanych do wybranej grupy" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5000622d-3246-47d4-b2bb-7f5f27f95ffa" LastKnownName="Wyświetlanie kont użytkowników przypisanych do wybranej grupy" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b8130413-6fdd-4fa0-a9c6-0728c3e478bc" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fc7a8655-79a2-46fb-b88b-4719a7d6da04" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="505700b4-5478-43ca-b20c-d279d7ef9a2a" name="Wyświetlanie użytkowników przypisanych do wybranej grupy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0d148157-017d-44c3-b3a5-39a356a68b61" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7c753734-9cc2-4a46-9b29-c3e353e1ae1a" />
+          </association>
+          <association Id="0b784a84-2136-4a11-a050-69df2d3f9a3a" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Wyświetlanie listy podzadań obecnie wykonywane w grupach użytkownika" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b3a21021-1502-41a1-949b-be315e83f46f" LastKnownName="Wyświetlanie listy działań obecnie wykonywanych w grupach użytkownika" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c80fee8-9384-4d75-a363-7038c0fa3d61" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2303c7b7-5688-42be-8561-cb25d81211ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bd714477-63f8-4307-93d8-b1851d98c77c" name="Wyświetlanie listy podzadań obecnie wykonywane w grupach użytkownika" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ecac1366-8366-43bd-a0bf-d27e695bd39b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="10f6e1b2-0c0c-4797-8451-6012a02a1569" />
+          </association>
+          <association Id="7284c016-f956-454f-b315-ff21733fcc4b" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Wyświetlanie listy aktualnych podzadań użytkownika" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e17fb087-b368-4c28-b3e9-a7d3c4705fd0" LastKnownName="Wyświetlanie listy aktualnych działań użytkownika" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7d566e34-c3b4-444e-91b5-7ac5f8c04093" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5dc9af68-1499-4926-bed6-523f8f5d7c9d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0225a2fe-eee1-4116-8422-1f81a1612db0" name="Wyświetlanie listy aktualnych podzadań użytkownika" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="217e5857-c30c-46af-a516-fff183505601" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dadde622-ea75-472b-8aa9-a7f877e6fec9" />
+          </association>
+          <association Id="c743d5b2-e662-4778-a6f9-f8a6924ffccd" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Wyświetlanie listy nieukończonych podzadań po terminie ostatecznym" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b68edd37-17f6-4c57-abcd-0987ad1d32ae" LastKnownName="Wyświetlanie listy nieukończonych działań po dacie zakończenia" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="17b3db8e-af83-4f13-b27a-78b4094f9737" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1e969506-03db-4166-a421-a3c535bb01f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92c1be3d-15de-4b36-865c-c25163cbabc6" name="Wyświetlanie listy nieukończonych podzadań po terminie ostatecznym" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="16d5ecd8-8d95-43a7-b1ac-284ac5a2bc0c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="534ee28b-ada5-48a8-9d43-b1e52d820857" />
+          </association>
+          <association Id="ada9e974-8774-488e-a41e-c1b998205843" isDerived="false" sourceEndRoleName="Użytkownik" targetEndRoleName="Wylogowanie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b34e48e6-6509-4752-8232-56b89a3d8406" LastKnownName="Wylogowanie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bdc3a1da-02a6-49e6-a106-a082de716239" name="Użytkownik" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="13d59c8f-44fa-4bef-b417-a6b5be4d8bde" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="73248a68-4604-474a-ac8d-c020e4211e79" name="Wylogowanie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="139981a3-f0ad-4c2a-b8ba-a7564789e53c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="62d1a084-b27c-4768-bc49-facc0e511b7b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="37e58f89-b8bf-4591-b3a5-fec9292e0ed5" name="Logowanie " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0877f31f-bc85-4b08-bc58-90ff02406972" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ca7303bc-96a4-4454-bf39-9c9cb2655367" name="Dodawanie zadania" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="12abdb5f-0325-4ffe-9603-779ce5f3db28" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f784a045-6d67-4a25-bc5b-c9473181fc4e" name="Wyświetlanie listy zadań" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b6d3e835-ecef-4a2d-b1b7-5e0d9732abd9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="85081525-c3ac-4342-8031-bb3092299e94" name="Edytowanie zadania" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f81dd353-22e9-470f-bba8-92dd2a8ce55a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="dd0b8de2-bdd0-4590-ab05-d2d93d606e03" name="Usuwanie zadania" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6a609bd0-3b65-48a6-9e26-ece5142fc51a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ae8957ee-9c07-4918-942c-b6ea2f44f7b4" name="Dodawanie podzadania" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3e81ff3d-e223-47e9-b21b-52d082a93727" />
+        <suppliersInternal>
+          <dependency Id="c1b15be9-91fe-465a-86d9-d13fcb4fccfe">
+            <useCaseMoniker Id="85081525-c3ac-4342-8031-bb3092299e94" LastKnownName="Edytowanie zadania" />
+            <elementDefinition Id="4e53d67a-7c2c-4ae5-b134-66481e972e35" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b5951b9f-1afb-40a1-a163-e30b8a42bc44" name="Usuwanie podzadania" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d2ae713e-1a71-4050-87f0-36c38070cd5c" />
+        <suppliersInternal>
+          <dependency Id="4bc64667-be2c-4240-a1ee-024e0f30b3ef">
+            <useCaseMoniker Id="85081525-c3ac-4342-8031-bb3092299e94" LastKnownName="Edytowanie zadania" />
+            <elementDefinition Id="11db699a-fdd2-4755-80ea-e9e0771e05ed" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2eea1809-40e1-49e9-90b0-e6347841c5ad" name="Dodawanie projektu" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8ddfdc5b-ef12-4f3d-bdb9-49ea8561d76d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d887f2c2-80fe-4011-a26e-33496748db6f" name="Wyświetlanie listy projektów" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6667c399-8332-421d-9041-c4136121a348" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="62a8ebb2-7196-41a1-9c6b-1fd3ba07dde3" name="Edytowanie projektu" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="230ceac0-708b-4a8e-9d6d-14b45a7d73c0" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1842231f-8d01-4671-9f6c-eb62e44eede8" name="Usuwanie projektu" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c2dc1f8c-6e37-49be-adca-123eb344c486" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="dcd31afc-1fdc-47b3-adc8-e8a5ff105b80" name="Dodawanie działania" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4176d43c-4b8e-442a-955a-347c6c1ba116" />
+        <suppliersInternal>
+          <dependency Id="41e15253-de18-4a95-a419-16c323ca4d3c">
+            <useCaseMoniker Id="62a8ebb2-7196-41a1-9c6b-1fd3ba07dde3" LastKnownName="Edytowanie projektu" />
+            <elementDefinition Id="ecdcf527-5d95-4ce9-872b-86255932e210" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="11bb5041-5793-4662-a503-a37963c8b090" name="Usuwanie działania" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a5b2f8de-7824-4e05-8d70-83d8aa3cc3b8" />
+        <suppliersInternal>
+          <dependency Id="97038e2a-2571-4998-88c0-3c7765c41583">
+            <useCaseMoniker Id="62a8ebb2-7196-41a1-9c6b-1fd3ba07dde3" LastKnownName="Edytowanie projektu" />
+            <elementDefinition Id="5ba34230-f94a-440f-86a4-1a2eca1c5107" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bc4717a7-2a58-4326-90fc-9e6900ca0ee8" name="Wyświetlanie listy działań" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5e7b23d1-94ee-49c8-a843-8b7909193c68" />
+        <suppliersInternal>
+          <dependency Id="55f7d992-aeaf-4368-af3d-c14d064f8ba1">
+            <useCaseMoniker Id="d887f2c2-80fe-4011-a26e-33496748db6f" LastKnownName="Wyświetlanie listy projektów" />
+            <elementDefinition Id="c300f8c9-d09c-4d13-a688-50c094e8c3b7" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c6cb77fe-876d-4c3f-b80c-6a60366ee0cb" name="Wyświetlanie listy podzadań" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9aff3724-244a-4fa6-8585-1be9d3eab48c" />
+        <suppliersInternal>
+          <dependency Id="38a77942-8160-49a1-9251-4611386baeb2">
+            <useCaseMoniker Id="f784a045-6d67-4a25-bc5b-c9473181fc4e" LastKnownName="Wyświetlanie listy zadań" />
+            <elementDefinition Id="849c5ab2-0086-4e56-a64c-dd94f471c952" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d6e58873-d5bc-45a3-a9b5-42c43d546165" name="Edytowanie działania" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="94d644c2-7eca-48c9-9666-52d2e6e4836e" />
+        <suppliersInternal>
+          <dependency Id="afeb0d58-b3f8-46d2-bf8c-1a2a1e79b9fc">
+            <useCaseMoniker Id="62a8ebb2-7196-41a1-9c6b-1fd3ba07dde3" LastKnownName="Edytowanie projektu" />
+            <elementDefinition Id="c115c898-f397-4779-94d1-4a8ddcd7be8e" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="30d1f064-2804-44d1-9d1a-31238873f66f" name="Uruchomienie licznika czasu pracy dla wybranego działania" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d0047222-0cc8-4396-bfb7-5022991ca64a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d830ee17-e7e0-42b7-a35b-767ab0002cf7" name="Wyświetlanie listy prac dla wybranego działania" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6242f295-9484-4f8a-b1a7-14cb298bfe07" />
+        <suppliersInternal>
+          <dependency Id="2764556d-cca7-43bb-8691-36b82ff11ec4">
+            <useCaseMoniker Id="30d1f064-2804-44d1-9d1a-31238873f66f" LastKnownName="Uruchomienie licznika czasu pracy dla wybranego działania" />
+            <elementDefinition Id="52444d4b-b60a-48a0-86fc-5e1b86a142f7" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="aedd3fe7-01c4-48b1-a059-6cba43cd76e4" name="Wyświetlanie kalendarza &#xD;&#xA;z zaznaczonymi datami zakończenia działań przypisanych do użytkownika" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="21bdccf7-e0a1-4f68-92f8-7919f7445cf6" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="01b38116-8f77-4ba4-bbb0-54e65a90fe26" name="Dodawanie grupy" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4617e8fd-b1eb-4ed7-a48c-23884dde28ef" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="60fab6ed-d7ac-440b-9ca3-110fb00038d1" name="Wyświetlanie grup użytkownika" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="03633257-59fc-4ebf-8b66-77c36f2412fa" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="86b4f33b-cf4d-46fa-b240-03e414de40a4" name="Usuwanie grupy" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5e471a07-329a-4b9d-a164-72a3f109d0e7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="69f99a43-14f7-4e8c-8739-0b58e06d90c2" name="Dodawanie konta użytkownika do wybranej grupy" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4cad40db-0ecf-4041-bccc-75b31f4d55d3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ba03adbb-41be-4876-9e1d-d84f133954b8" name="Usuwanie konta użytkownika &#xD;&#xA;z wybranej grupy" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cd32344a-d3fd-4ef4-84e7-2de045cd5150" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="db87bc79-9f00-4077-bd62-5ab47bf40150" name="Ustawienie roli konta użytkownika w grupie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d2082977-e73d-4d24-ae99-db61213d857e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5000622d-3246-47d4-b2bb-7f5f27f95ffa" name="Wyświetlanie kont użytkowników przypisanych do wybranej grupy" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d0f8adc2-329a-41d9-b6a4-6372fff28af1" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e17fb087-b368-4c28-b3e9-a7d3c4705fd0" name="Wyświetlanie listy aktualnych działań użytkownika" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a47ffea7-e6cc-42c4-8795-295831704db7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b3a21021-1502-41a1-949b-be315e83f46f" name="Wyświetlanie listy działań obecnie wykonywanych w grupach użytkownika" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e0347f03-9753-4f7f-9e7e-1dcf252a2f8f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b68edd37-17f6-4c57-abcd-0987ad1d32ae" name="Wyświetlanie listy nieukończonych działań po dacie zakończenia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d7340696-291c-46cb-873f-8cdffd300c5f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b34e48e6-6509-4752-8232-56b89a3d8406" name="Wylogowanie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="27ebf2cb-9f62-4a63-b287-7dda933f8c6d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="b7991c93-d596-44eb-a32a-f7a654b319f9" name="Edytor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c39af430-93cd-4800-b24c-3da874448ae0" />
+        <targetEnds>
+          <association Id="1e825b8d-078c-422a-896d-92eba2ac566e" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Logowanie " isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="37e58f89-b8bf-4591-b3a5-fec9292e0ed5" LastKnownName="Logowanie " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1d063498-8c1c-479a-8673-0b761ff1fafe" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="82f7ccf2-1e72-43d6-b5fb-6bb6ed421d9d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="83f74c66-eb02-4be3-beb7-ac30515787e0" name="Logowanie " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f7f40b43-e7cb-487a-81c1-96d9b5643de9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1318cc9c-4d3c-43bd-869a-e475ce1b9fab" />
+          </association>
+          <association Id="675edcca-c007-47e7-8558-1a3b1682cb8d" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Wylogowanie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b34e48e6-6509-4752-8232-56b89a3d8406" LastKnownName="Wylogowanie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9256a7d8-04c8-4f09-99a8-a2fd760ee1d1" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c7efba69-fd14-45e9-a80f-5a712100c604" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cee904ec-c5dc-4dfe-9257-d4faa533eb52" name="Wylogowanie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9b21c8d1-a794-4da2-b633-86f07bcdb23b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5fb037c6-b2b7-4479-b399-b0c025e3acc3" />
+          </association>
+          <association Id="62901f79-dbad-443c-918d-7cf7b397fdd2" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Wyświetlanie zadań" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f784a045-6d67-4a25-bc5b-c9473181fc4e" LastKnownName="Wyświetlanie listy zadań" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ed56ca3c-382c-4687-8578-2431746bb8bb" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8dbffea8-e466-42f3-a30e-844de3e143d0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a744dd3c-4e70-466e-b67c-a9077e67807c" name="Wyświetlanie zadań" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bef077ec-b989-4a03-8826-fa6fc00dac40" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="38cc5bbb-dce8-4f59-8c8d-eae63900e259" />
+          </association>
+          <association Id="746e6f84-2739-4b17-a51f-607a6d4a6a76" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Edytowanie zadania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="85081525-c3ac-4342-8031-bb3092299e94" LastKnownName="Edytowanie zadania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6c81651a-ee25-4ca6-b25e-70ed8d790e1c" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="288a25e7-bada-45a6-8949-07d63f99ae5e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9a3ba2e6-c11d-4112-8500-31823db979a1" name="Edytowanie zadania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b286dd8d-a77f-48cc-90bb-de7f56c109dc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7da88637-6c4c-48da-8e35-12a44c9467f9" />
+          </association>
+          <association Id="b5cc7b0a-e528-49e5-b0c4-728f6d8fc672" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Wyświetlanie podzadań" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c6cb77fe-876d-4c3f-b80c-6a60366ee0cb" LastKnownName="Wyświetlanie listy podzadań" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f7b79bed-f6cf-49ef-8570-c6e98fd2d5e2" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0f880c6e-0dab-4347-b445-80d2e4ac8d7a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8869ffb0-e4fa-4c54-a67f-9f13640478ac" name="Wyświetlanie podzadań" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3173993a-f791-4a64-bb48-0eedee8b8e12" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="74edbc0d-7428-4fb6-874b-753d926b2ce6" />
+          </association>
+          <association Id="fdbc3bef-1674-41e4-acb1-b8f29418d640" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Wyświetlanie listy aktualnych działań użytkownika" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e17fb087-b368-4c28-b3e9-a7d3c4705fd0" LastKnownName="Wyświetlanie listy aktualnych działań użytkownika" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c9ada541-32d2-4ebe-9978-198de033fe43" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ef72e474-dd9a-4562-8462-132a4609ae99" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2b844ae0-30cd-4244-9ca2-abb46b00234c" name="Wyświetlanie listy aktualnych działań użytkownika" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ee4032ce-5f1a-4e65-a4b4-e40d39896b57" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d6597a7a-03e5-4567-9213-d253f9aa6f47" />
+          </association>
+          <association Id="dae37388-a371-4a94-85a6-63629e799d2f" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Wyświetlanie listy działań obecnie wykonywanych w grupach użytkownika" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b3a21021-1502-41a1-949b-be315e83f46f" LastKnownName="Wyświetlanie listy działań obecnie wykonywanych w grupach użytkownika" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4f7b7ffb-7e54-4ef0-a643-bef052b5e374" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="163be34f-11d8-464e-825f-718d86ddb9f1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6ff26a92-f4a0-407d-b4fd-0e546c6693b6" name="Wyświetlanie listy działań obecnie wykonywanych w grupach użytkownika" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e0fe6f45-f52b-4a00-b425-440cbe712d60" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="28ec2299-3a20-4e00-a16e-d4ce289cb5fc" />
+          </association>
+          <association Id="5bb42290-67ec-4d69-b179-9b405c5a5779" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Wyświetlanie listy nieukończonych działań po dacie zakończenia" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b68edd37-17f6-4c57-abcd-0987ad1d32ae" LastKnownName="Wyświetlanie listy nieukończonych działań po dacie zakończenia" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="333b5ea3-f7c0-4369-8ec8-e27d799bcc20" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2611aaaf-61e3-4ddf-8997-1f5daf3a396f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c43e5ea9-1302-476f-9f25-35b8a9b353ac" name="Wyświetlanie listy nieukończonych działań po dacie zakończenia" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="651c8ddd-598a-4c1f-95b3-8a47d7efef18" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ce6a1d56-e392-4297-91a1-0cfadf0e767d" />
+          </association>
+          <association Id="17f327fa-fe9c-43c5-92d9-9ada33f46faa" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Wyświetlanie listy projektów" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d887f2c2-80fe-4011-a26e-33496748db6f" LastKnownName="Wyświetlanie listy projektów" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="18034b4b-e5b5-4da7-8fff-d3dff8445273" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="38355e7a-1553-4c1e-ba7a-339492238dff" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="22424313-2348-4acf-bd25-c7cb47627f66" name="Wyświetlanie listy projektów" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fa892734-775e-4889-87cb-c750685611fa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7557d0f6-4f31-45d5-8b80-4b29b932e066" />
+          </association>
+          <association Id="34e8051a-444e-4608-9509-e44ced8496ff" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Edytowanie projektu" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="62a8ebb2-7196-41a1-9c6b-1fd3ba07dde3" LastKnownName="Edytowanie projektu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4d859d38-d56f-45f9-9447-5fd55f3669f6" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fe04ab56-9d4f-4136-99da-46de80346c5a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0eb2891f-c24b-4676-b184-45a68d6f8a52" name="Edytowanie projektu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1a6f95f4-5552-4a4a-bca9-1b63cceff6b4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ec21cb41-970b-485d-859f-8cf9df9e0f28" />
+          </association>
+          <association Id="f89a191c-eaaf-4329-8e2a-4e1da26a1913" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Wyświetlanie listy działań" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bc4717a7-2a58-4326-90fc-9e6900ca0ee8" LastKnownName="Wyświetlanie listy działań" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1fa95128-efd0-4037-9f4c-597d80d5326e" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="36f288b9-5c3e-413c-81da-e5b9910fe87c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a9b8a380-6ca2-45c6-a42d-f6d66182b098" name="Wyświetlanie listy działań" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9b4051dd-4b81-49f7-ada5-b30eb8635cf3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="015419c0-96cf-41f9-ac99-867de09007f5" />
+          </association>
+          <association Id="d84d853e-a1c9-40f0-96c4-cdb73e7f8533" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Edytowanie działania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d6e58873-d5bc-45a3-a9b5-42c43d546165" LastKnownName="Edytowanie działania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="840990e5-4382-4707-9cd8-0124ce0277ca" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1e258e56-76d8-4df1-8145-99e8d1ebcad1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b6286f45-0750-4c4d-a40c-1363391fa981" name="Edytowanie działania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d1cc98a0-38fd-4e27-bcb0-5f39b2c326c9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1b56d664-2ced-41f8-bd27-afadc20b3049" />
+          </association>
+          <association Id="99af9624-33ef-465a-9ad3-4266efa10cdb" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Uruchomienie licznika czasu pracy dla wybranego działania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="30d1f064-2804-44d1-9d1a-31238873f66f" LastKnownName="Uruchomienie licznika czasu pracy dla wybranego działania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b916e69b-e1eb-4f67-9388-08b5dbaf0d96" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8790b61a-1ddb-4e61-b623-877a5e8b5e9d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6aabd56a-39e9-4a85-b26d-f1c2b30ad5cc" name="Uruchomienie licznika czasu pracy dla wybranego działania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="18858526-d2ea-4416-873e-04dc5b36be2e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f55b3b98-34c4-40cf-b081-4b783ab55dca" />
+          </association>
+          <association Id="94285115-ce66-4778-8fd8-c399499676b2" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Wyświetlanie listy prac dla wybranego działania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d830ee17-e7e0-42b7-a35b-767ab0002cf7" LastKnownName="Wyświetlanie listy prac dla wybranego działania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6134bca9-03b1-437b-b5c2-57d2930f8fc7" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0fe2352e-f013-43fc-ab3b-804396b8b03b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="36980141-eb73-41c1-a11b-7916322c28f3" name="Wyświetlanie listy prac dla wybranego działania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2c2ea138-c4b6-45f6-b6bf-e5b3ba700da9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9581abdc-69cc-4409-9595-9fe3721871b7" />
+          </association>
+          <association Id="ddaa3127-0545-4734-ad8f-5d5650bdb45d" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Wyświetlanie kalendarza &#xD;&#xA;z zaznaczonymi datami zakończenia działań przypisanych do użytkownika" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="aedd3fe7-01c4-48b1-a059-6cba43cd76e4" LastKnownName="Wyświetlanie kalendarza &#xD;&#xA;z zaznaczonymi datami zakończenia działań przypisanych do użytkownika" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f6dac495-dcdf-4ac8-a580-ac49ceaf119a" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a10f9707-13ad-4f77-99f4-962014920a8f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eb612b2d-20e0-4c0e-b42f-c504981941a7" name="Wyświetlanie kalendarza &#xD;&#xA;z zaznaczonymi datami zakończenia działań przypisanych do użytkownika" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ba2ebd20-4aa5-4874-8eaa-2459615aa85c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7332d5ff-77e3-4dd2-8749-cd98902160e8" />
+          </association>
+          <association Id="39238a73-aa49-4c7f-aac6-1a3ba792e443" isDerived="false" sourceEndRoleName="Edytor" targetEndRoleName="Wyświetlanie grup użytkownika" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="60fab6ed-d7ac-440b-9ca3-110fb00038d1" LastKnownName="Wyświetlanie grup użytkownika" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="793ae2ae-e94f-48aa-94d0-5b33bf576c78" name="Edytor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="32cd92ba-54da-4725-9ff7-6abcf3290046" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0ce4796d-4602-4eab-adbf-3fcd70d8ad13" name="Wyświetlanie grup użytkownika" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1e12a03b-d8ba-414e-a0fc-7b389ab5cd75" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ff20224f-24a4-4a4b-b5bf-b70d82e1eb4c" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="93cc3487-c091-4979-aad0-35481ea60a5d" name="Czytacz" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="934bf22a-7d99-43fa-9565-a84ef72a6af3" />
+        <targetEnds>
+          <association Id="b3293d5d-3956-4d08-bf3c-46d9af90fad6" isDerived="false" sourceEndRoleName="Czytacz" targetEndRoleName="Logowanie " isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="37e58f89-b8bf-4591-b3a5-fec9292e0ed5" LastKnownName="Logowanie " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d9243913-9866-4714-98f9-02f346934561" name="Czytacz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="12450c6b-12e4-41f1-a120-f20a5f76815b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c3f13cc7-bd7a-49b5-868d-71ada510be13" name="Logowanie " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0278b37c-f547-4d0f-8f41-e518c84d622e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="54d596f6-76b6-4b98-9e22-07f2fd158b71" />
+          </association>
+          <association Id="13b8a7c3-8921-4322-b65f-6c88a243e880" isDerived="false" sourceEndRoleName="Czytacz" targetEndRoleName="Wylogowanie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b34e48e6-6509-4752-8232-56b89a3d8406" LastKnownName="Wylogowanie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3fc0fe74-0f26-4a16-b5d0-ea4fafa34012" name="Czytacz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="29a893c7-57f8-46bd-a97e-dc0136504bc5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fd25b3b5-7d2d-48b2-b869-c0362a67057b" name="Wylogowanie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ec76f142-4a2c-4d59-a618-8a8a066dde5a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ac8287a4-6072-4379-bbbc-ab8389ede95b" />
+          </association>
+          <association Id="87bfe25d-8ec1-4708-83c7-51077f06fed0" isDerived="false" sourceEndRoleName="Czytacz" targetEndRoleName="Wyświetlanie zadań" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f784a045-6d67-4a25-bc5b-c9473181fc4e" LastKnownName="Wyświetlanie listy zadań" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9eea2454-8d1d-4f28-8cbb-a8fa82fdca88" name="Czytacz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="96b9a70e-f629-4802-8a0d-3eeef9cabf59" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="55e12822-2887-4996-ba93-40640319c5a1" name="Wyświetlanie zadań" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e6724fac-6a46-4f0e-9180-8ded60fa0c6a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="540fe173-e39c-4d1d-9a47-56248c7325a6" />
+          </association>
+          <association Id="3df20762-7135-44cb-9665-3f1ea62cb70b" isDerived="false" sourceEndRoleName="Czytacz" targetEndRoleName="Wyświetlanie podzadań" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c6cb77fe-876d-4c3f-b80c-6a60366ee0cb" LastKnownName="Wyświetlanie listy podzadań" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5f8b1b47-4a04-4120-a3f3-45f6b53cc5d1" name="Czytacz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="15ad4049-5984-4fe8-b43f-574a07f308ac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c02d5fda-380c-4c5a-893d-e4f29c46b0d9" name="Wyświetlanie podzadań" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="36c6ace6-7df9-44a9-b7ad-f73b88ab9609" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6a90ec73-b220-40d0-8981-ba4f80ccd600" />
+          </association>
+          <association Id="260a1e85-1238-4c56-999f-47460380315c" isDerived="false" sourceEndRoleName="Czytacz" targetEndRoleName="Wyświetlanie listy działań obecnie wykonywanych w grupach użytkownika" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b3a21021-1502-41a1-949b-be315e83f46f" LastKnownName="Wyświetlanie listy działań obecnie wykonywanych w grupach użytkownika" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="828239d7-4719-4aa4-8e91-933b2f862b37" name="Czytacz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d812347b-43b4-4c0e-a16e-f43506587b1f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4fa8b343-77d3-48ed-9003-6ae037ef0951" name="Wyświetlanie listy działań obecnie wykonywanych w grupach użytkownika" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9bd23db3-c108-4e61-96ef-027602a74ffb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fca0b7a9-1c55-438a-8d94-458104e1c909" />
+          </association>
+          <association Id="69389dd1-e7c3-420e-95f5-6ae77d8e8b5f" isDerived="false" sourceEndRoleName="Czytacz" targetEndRoleName="Wyświetlanie listy nieukończonych działań po dacie zakończenia" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b68edd37-17f6-4c57-abcd-0987ad1d32ae" LastKnownName="Wyświetlanie listy nieukończonych działań po dacie zakończenia" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6324edd3-179b-4f29-a7e6-7f78486f5757" name="Czytacz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1bdb161c-8fb2-4cba-b572-9eb6dcf0fc85" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="28b8f05e-8593-4948-9125-f9e8690a7483" name="Wyświetlanie listy nieukończonych działań po dacie zakończenia" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f85f1269-7a2e-486f-b034-e62498c5907d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a3f1664a-b87f-4d4b-a732-5a5a4aec5051" />
+          </association>
+          <association Id="742d4b13-1453-4ac2-81a2-51cb94b8ccd3" isDerived="false" sourceEndRoleName="Czytacz" targetEndRoleName="Wyświetlanie listy aktualnych działań użytkownika" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e17fb087-b368-4c28-b3e9-a7d3c4705fd0" LastKnownName="Wyświetlanie listy aktualnych działań użytkownika" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2e2964b4-acc1-41a8-bdc3-a7f4d448f0a9" name="Czytacz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c0d67530-11ca-49e6-9ffe-1bbefa9a084f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="693c0aa6-e2b9-4622-8a93-9a687d3ad9d1" name="Wyświetlanie listy aktualnych działań użytkownika" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0b92784d-2ea5-4019-bdb3-209b4864fd09" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f53757d3-938e-4f08-80d1-f4ed66a8f32d" />
+          </association>
+          <association Id="948a8e1b-f8c0-4fb1-8888-90761df1ede9" isDerived="false" sourceEndRoleName="Czytacz" targetEndRoleName="Wyświetlanie listy projektów" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d887f2c2-80fe-4011-a26e-33496748db6f" LastKnownName="Wyświetlanie listy projektów" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b1f31385-2a80-406c-80d3-6c376636c410" name="Czytacz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1aee48f8-2f92-4314-a790-39b22727c2fc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6f339529-81e5-4ec2-bfc0-62ea588eca82" name="Wyświetlanie listy projektów" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="78749388-7c40-4e10-ac97-e3395e08540a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9b9a86cc-05d4-4857-95da-e9bd20f05da9" />
+          </association>
+          <association Id="cc99017d-8d17-446f-aa09-e71caed4f608" isDerived="false" sourceEndRoleName="Czytacz" targetEndRoleName="Wyświetlanie listy działań" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bc4717a7-2a58-4326-90fc-9e6900ca0ee8" LastKnownName="Wyświetlanie listy działań" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="50713350-c337-4720-867c-496abcf2d6dc" name="Czytacz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7d5f6f6a-4b99-4ac5-8484-c91a35c31dda" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b4c6b86a-dd19-41f2-ac10-bffddf68f086" name="Wyświetlanie listy działań" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bc0d18e5-1929-4242-83f2-8a2a4fb4d8f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2d7d4ff2-8b9c-4980-9402-e3dab94ff661" />
+          </association>
+          <association Id="da20be39-fb6f-41c5-a7ad-2c5f8634f980" isDerived="false" sourceEndRoleName="Czytacz" targetEndRoleName="Uruchomienie licznika czasu pracy dla wybranego działania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="30d1f064-2804-44d1-9d1a-31238873f66f" LastKnownName="Uruchomienie licznika czasu pracy dla wybranego działania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c24f0488-129c-41f6-915a-e6eb090b7e75" name="Czytacz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e6dddc3e-7c06-4c9f-85b8-4081b3c5fa1b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ab4a0e5b-3ab3-4e37-8bad-aeed290eddb0" name="Uruchomienie licznika czasu pracy dla wybranego działania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5cb9a5ba-f996-4c92-9415-09320597c616" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0a891630-8a7c-4fc1-86cb-1ab54af88223" />
+          </association>
+          <association Id="81cbb18e-2ef5-4649-a727-93029864ad62" isDerived="false" sourceEndRoleName="Czytacz" targetEndRoleName="Wyświetlanie listy prac dla wybranego działania" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d830ee17-e7e0-42b7-a35b-767ab0002cf7" LastKnownName="Wyświetlanie listy prac dla wybranego działania" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="50e9627f-75b9-440f-ab41-347073513104" name="Czytacz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="98499a26-3214-446f-b086-4d09b8f81d84" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e8d70d97-0fbb-426f-820e-1eb1940e986b" name="Wyświetlanie listy prac dla wybranego działania" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5074fcd9-128a-4fa5-ab89-3792c8d819d7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="47ef43a0-b987-4018-8e59-e13201f63937" />
+          </association>
+          <association Id="21e3ff00-ebf1-4abc-a0c6-2a97ff27c552" isDerived="false" sourceEndRoleName="Czytacz" targetEndRoleName="Wyświetlanie kalendarza &#xD;&#xA;z zaznaczonymi datami zakończenia działań przypisanych do użytkownika" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="aedd3fe7-01c4-48b1-a059-6cba43cd76e4" LastKnownName="Wyświetlanie kalendarza &#xD;&#xA;z zaznaczonymi datami zakończenia działań przypisanych do użytkownika" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="be2225b9-9c9e-48e1-9d19-fc0f3146b9b4" name="Czytacz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6b458e24-8a05-4018-a0e6-6459de71f4a8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c1348e4-4853-46c8-8e70-bc711c78517e" name="Wyświetlanie kalendarza &#xD;&#xA;z zaznaczonymi datami zakończenia działań przypisanych do użytkownika" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a6f017cd-f3d5-4f8f-b03e-57a11dbb4e92" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0b30529a-c5bc-4542-bf09-214f0166332a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="b145e9ce-0c34-49f9-b4e8-93a46b1a630d" name="ModelingProject">
+    <elementDefinition Id="8e320b84-6760-4d0a-aecd-56b84cf17914" />
+    <profileInstances>
+      <packageHasProfileInstances Id="f704ef87-5392-4d31-bf9c-bb020d44d1bb">
+        <profileInstance Id="1a304734-987b-419e-b0be-a75fbdc322e5" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1b1ebcd7-5d4a-4679-a2fa-5c42ffc6ff84">
+        <profileInstance Id="c93ec06f-ee74-4f13-ac06-34e7f4e8f1e6" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

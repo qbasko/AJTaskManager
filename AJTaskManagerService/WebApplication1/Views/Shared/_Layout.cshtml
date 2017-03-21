@@ -1,0 +1,63 @@
+﻿@using System
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - AJTaskManager</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+    <style type="text/css">
+        a.indexLogo {
+            background: url(../../Assets/indexLogo2.png) no-repeat top left;
+            display: block;
+            width: 210px;
+            height: 50px;
+            text-indent: -9999px; /* hides the link text */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               @* <img id="img_logo" alt="Logo" src="@Url.Content("~/Assets/MainLogo.png")" height="50" width="180" />*@
+                @Html.ActionLink("AJTaskManager", "Index", "Home", null, new { @class = "indexLogo" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Tasks", "Index", "AddTodoList")</li>
+                    <li>@Html.ActionLink("Projects", "Index", "TaskItem")</li>
+                   @* <li>@Html.ActionLink("Calendar", "Index", "Home")</li>*@
+                    <li>@Html.ActionLink("Groups", "Index", "Group")</li>
+                    <li>@Html.ActionLink("Settings", "Index", "Settings")</li>
+                    <li>@Html.ActionLink("Reports", "Index", "Statistic")</li>
+                    @*<li>@Html.ActionLink("Contact List", "Index", "Contact")</li>*@
+                    @*<li>@Html.ActionLink("About", "About", "Home")</li>*@
+                    @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - AJTaskManager - manage your tasks wherever you are</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

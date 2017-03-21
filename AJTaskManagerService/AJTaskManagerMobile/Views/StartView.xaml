@@ -1,0 +1,33 @@
+﻿<UserControl xmlns:Navigation="using:Syncfusion.UI.Xaml.Controls.Navigation" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AJTaskManagerMobile.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:Input="using:Syncfusion.UI.Xaml.Controls.Input"
+    x:Class="AJTaskManagerMobile.Views.StartView"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" HorizontalAlignment="Stretch" Margin="100,0,100,0" Content="Quick list">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="Tapped">
+                    <core:InvokeCommandAction Command="{Binding NavigateToDoItemsCommand, Mode=OneWay}"/>
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+        </Button>
+                <Button Grid.Row="1" HorizontalAlignment="Stretch" Margin="100,0,100,0" Content="Opt1"/>
+        <Button Grid.Row="2" HorizontalAlignment="Stretch" Margin="100,0,100,0" Content="Opt2"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,94 @@
+﻿<common:BindablePage
+    x:Class="AJTaskManagerMobile.Views.TasksInProgressPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AJTaskManagerMobile.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:common="using:AJTaskManagerMobile.Common"
+    xmlns:notification="using:Syncfusion.UI.Xaml.Controls.Notification"
+    xmlns:media="using:Microsoft.Xaml.Interactions.Media"
+    mc:Ignorable="d"
+    Background="Transparent"
+    DataContext="{Binding TasksInProgressViewModel , Source={StaticResource Locator}}"
+    Name="TasksInProgress">
+
+    <Page.Resources>
+        <Storyboard x:Name="AnimateRefresh">
+            <DoubleAnimation Storyboard.TargetName="im" Storyboard.TargetProperty="Angle" By="10" To="360" Duration="0:0:3" FillBehavior="Stop" />
+        </Storyboard>
+    </Page.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.08*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Source="../Assets/Icons/Dark/refresh.png" Height="50" Grid.Row="0" RenderTransformOrigin=".5,.5" Visibility="{Binding IsRefreshVisible, Converter= {StaticResource VisConverter}, Mode=TwoWay}">
+            <Image.RenderTransform>
+                <RotateTransform Angle="0" x:Name="im" />
+            </Image.RenderTransform>
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="Tapped">
+                    <core:InvokeCommandAction Command="{Binding DataContext.RefreshCommand, ElementName=TasksInProgress}"
+                                                                CommandParameter="{Binding}"/>
+                    <media:ControlStoryboardAction Storyboard="{StaticResource AnimateRefresh}"/>
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+        </Image>
+        <notification:SfBusyIndicator Grid.Row="1" IsBusy="{Binding IsBusy, Mode=TwoWay}"/>
+        <ListView Grid.Row="1" ItemsSource="{Binding TaskSubitems}" Margin="10,0,10,10" ShowsScrollingPlaceholders="True" IsItemClickEnabled="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Holding="GridHolding">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <FlyoutBase.AttachedFlyout>
+                                <MenuFlyout>
+                                    <MenuFlyoutItem Text="Open">
+                                        <interactivity:Interaction.Behaviors>
+                                            <core:EventTriggerBehavior EventName="Click">
+                                                <core:InvokeCommandAction Command="{Binding DataContext.NavigateToTaskSubitemWorkCommand, ElementName=TasksInProgress}" CommandParameter="{Binding}"/>
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
+                                    </MenuFlyoutItem>
+                                    <MenuFlyoutItem Text="Edit">
+                                        <interactivity:Interaction.Behaviors>
+                                            <core:EventTriggerBehavior EventName="Click">
+                                                <core:InvokeCommandAction Command="{Binding DataContext.NavigateToTaskSubitemCommand, ElementName=TasksInProgress}" CommandParameter="{Binding}"/>
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
+                                    </MenuFlyoutItem>
+                                </MenuFlyout>
+                            </FlyoutBase.AttachedFlyout>
+                            <CheckBox Grid.Column="0" Margin="0,0,0,0" IsChecked="{Binding IsCompleted, Mode=TwoWay}" VerticalAlignment="Center" Background="Transparent" Foreground="White">
+                                <interactivity:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="Checked">
+                                        <core:InvokeCommandAction Command="{Binding DataContext.CheckboxCheckedCommand, ElementName=TasksInProgress}"
+                                                                CommandParameter="{Binding}"/>
+                                    </core:EventTriggerBehavior>
+                                    <core:EventTriggerBehavior EventName="Unchecked">
+                                        <core:InvokeCommandAction Command="{Binding DataContext.CheckboxCheckedCommand, ElementName=TasksInProgress}"
+                                                                CommandParameter="{Binding}"/>
+                                    </core:EventTriggerBehavior>
+                                </interactivity:Interaction.Behaviors>
+                            </CheckBox>
+                            <TextBlock Grid.Column="0" Margin="35,15,0,0" Text="{Binding Name}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" TextWrapping="Wrap">
+                            <interactivity:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="Tapped">
+                                    <core:InvokeCommandAction Command="{Binding DataContext.NavigateToTaskSubitemWorkCommand, ElementName=TasksInProgress}"
+                                                                CommandParameter="{Binding}"/>
+                                </core:EventTriggerBehavior>
+                            </interactivity:Interaction.Behaviors>
+                            </TextBlock>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</common:BindablePage>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="03bd9d72-86f2-456f-8fb9-06d77f7ec0fc" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="1efcfdf8-e2fa-4d30-a8b0-e64735a11b6c" name="View" />
+    <layer Id="0a81775c-66c2-4404-9f01-7cab5e7f7e43" name="ViewModel" />
+    <layer Id="2de088ff-da73-461a-a77b-13dea9b1dc68" name="Model">
+      <childLayers>
+        <layer Id="b6b509a7-acf9-4f56-9dd0-2ebe62ab0af0" name="Services" />
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

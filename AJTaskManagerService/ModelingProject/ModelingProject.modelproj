@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{a9986fc9-74e5-4352-bfcb-8004f5f85f0a}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>ModelingProject</Name>
+    <RootNamespace>ModelingProject</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="CodeMap1MobileService.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CodeMapMobileAppNew.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CodeMapWebAppNew.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="TasksAndProjects.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="TasksAndProjects.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>TasksAndProjects.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLUseCaseDiagramWEB.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagramWEB.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagramWEB.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="CodeMap1.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CodeMapWebApp.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="WindowsPhoneApp.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CodeMap1.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="WindowsPhoneAppExt.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLClassDiagram.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLClassDiagram.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLClassDiagram.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="AJTaskManager.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="AJTaskManager.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AJTaskManager.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="UseCaseDiagramMobileApp.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCaseDiagramMobileApp.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCaseDiagramMobileApp.usecasediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\ModelingProject.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="LayerDiagram1.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="LayerDiagram1.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagram1.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="LayerDiagram1.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagram1.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="MvvmLayerDiagram.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="MvvmLayerDiagram.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>MvvmLayerDiagram.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="MvvmLayerDiagram.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>MvvmLayerDiagram.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AJTaskManagerMobile\AJTaskManagerMobile.csproj">
+      <Name>AJTaskManagerMobile</Name>
+      <Project>{8a9b4dbc-a7fd-49f3-a001-089b7939cdfc}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

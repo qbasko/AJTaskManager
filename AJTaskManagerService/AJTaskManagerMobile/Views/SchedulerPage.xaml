@@ -1,0 +1,24 @@
+﻿<common:BindablePage xmlns:Schedule="using:Syncfusion.UI.Xaml.Schedule" 
+    x:Class="AJTaskManagerMobile.Views.SchedulerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AJTaskManagerMobile.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          xmlns:common="using:AJTaskManagerMobile.Common"
+    mc:Ignorable="d"
+  DataContext="{Binding SchedulerPageViewModel, Source={StaticResource Locator}}"
+    Background="{StaticResource PhoneBackgroundBrush}">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <ImageBrush x:Key="BackgroundImageBrush" ImageSource="../Assets/backgroundOnePage.png"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="{StaticResource BackgroundImageBrush}">
+        <Schedule:SfSchedule Foreground="White" Appointments="{Binding ScheduleItems, Mode=TwoWay}"/>
+    </Grid>
+</common:BindablePage>

@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "AccessDenied";
+}
+
+<div class="text-center">
+    <h2>Access Denied</h2>
+
+    You do not have permission to execute this action.
+
+</div>
+
+
+<div>
+    @Html.ActionLink("Back", "Index", new { taskItemId = ViewBag.TaskItemId })
+</div>

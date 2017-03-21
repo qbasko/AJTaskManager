@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5117a75258304b03a150f7638ab14988" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="Model1.C__MigrationHistory" Width="2" PointX="6.625" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.ExternalUsers" Width="1.5" PointX="2.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Groups" Width="1.5" PointX="4.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.RoleTypes" Width="1.5" PointX="4.875" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.TaskItems" Width="1.5" PointX="4.875" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.TaskStatus" Width="1.5" PointX="2.875" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.TaskSubitems" Width="1.875" PointX="6.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.TaskSubitemWorks" Width="1.875" PointX="6.875" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.TodoItems" Width="1.5" PointX="4.875" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.TodoLists" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.UserDomains" Width="1.5" PointX="2.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.UserGroups" Width="1.5" PointX="2.875" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.UserNotifications" Width="1.875" PointX="6.875" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Users" Width="1.5" PointX="4.875" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_UserDomains_UserDomainId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_ExternalUsers_AJTaskManagerService_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_TaskItems_AJTaskManagerService_Groups_GroupId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_TodoLists_AJTaskManagerService_Groups_GroupId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Groups_GroupId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_RoleTypes_RoleTypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_TaskItems_AJTaskManagerService_TaskStatus_TaskStatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskItems_TaskItemId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_TaskStatus_TaskStatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_TaskSubitems_AJTaskManagerService_Users_ExecutorId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_TaskSubitems_TaskSubitemId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_UserNotifications_AJTaskManagerService_TaskSubitems_TaskSubitemId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_TaskSubitemWorks_AJTaskManagerService_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_TodoItems_AJTaskManagerService_TodoLists_TodoListId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_UserGroups_AJTaskManagerService_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AJTaskManagerService_UserNotifications_AJTaskManagerService_Users_UserId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

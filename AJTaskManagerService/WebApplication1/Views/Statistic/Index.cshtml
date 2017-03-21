@@ -1,0 +1,134 @@
+﻿@using System.Collections.Concurrent
+@using System.Drawing
+@model WebApplication1.Models.StatisticsModel
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Index</h2>*@
+
+@using (Html.BeginForm())
+{
+    @*<p>
+            Find by name: @Html.TextBox("chartType")
+            <input type="submit" value="generate"/>
+        </p>
+        <p>
+            @Html.CheckBox("checkBox")
+        </p>*@
+
+
+    @*<div>
+            <img src="@Url.Action("GetRainfallChart")" height="600" alt="Drawing chart with HTML Helper"/>
+        </div>
+
+        <div>
+            <img src="@Url.Action("GetBarChart")" height="600" alt="Drawing chart with HTML Helper"/>
+        </div>
+
+        <div>
+            <img src="@Url.Action("GetColumnChart")" height="600" alt="Drawing chart with HTML Helper"/>
+        </div>
+
+        <div>
+            <img src="@Url.Action("GetLineChart")" height="600" alt="Drawing chart with HTML Helper"/>
+        </div>
+
+        <div>
+            <img src="@Url.Action("GetStockChart")" height="600" alt="Drawing chart with HTML Helper"/>
+        </div>
+
+        <div>
+            <img src="@Url.Action("GetAreaChart")" height="600" alt="Drawing chart with HTML Helper"/>
+        </div>*@
+
+    <div>
+        <br />
+    </div>
+
+    <div class="text-center">
+        <p>
+            @{
+                string fromDatePie = ViewBag.FromDatePie;
+                string toDatePie = ViewBag.ToDatePie;
+                <input class="text-box single-line" data-val="true" data-val-date="The field From Date must be a date." data-val-required="The From Date field is required." id="FromDatePie" name="FromDatePie" type="date" value="@fromDatePie">
+                <input class="text-box single-line" data-val="true" data-val-date="The field To Date must be a date." data-val-required="The To Date field is required." id="ToDatePie" name="ToDatePie" type="date" value="@toDatePie">
+                <input type="submit" value="Generate" class="btn btn-default"/>
+            }
+        </p>
+
+        <div class="row text-center">
+           
+                @*<a href="@Url.Action("Index", "TaskItem")">*@
+                    @*<h2>ViewBag.TextPieChart</h2>*@
+            <p>
+                @{
+                    
+                @*@Html.LabelFor(ViewBag.TextPieChart)*@
+                }
+            </p>
+                    @* <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>*@
+                @*</a>*@
+         
+        </div>
+        @{
+            string pieImage = Url.Action("GetPieChart", new {fromDatePie = ViewBag.FromDatePie, toDatePie = ViewBag.ToDatePie});
+            <img src="@pieImage" alt="Chart"/>
+        }
+    </div>
+
+    <div class="text-center">
+        <p>
+            @Html.LabelFor(model => model.GroupName)
+            @Html.DropDownList("GroupID", null, htmlAttributes: new {@class = "form-control2"})
+            @{
+                string fromDateWorks = ViewBag.FromDateWorks;
+                string toDateWorks = ViewBag.ToDateWorks;
+                <input class="text-box single-line" data-val="true" data-val-date="The field From Date must be a date." data-val-required="The From Date field is required." id="FromDatePie" name="FromDateWorks" type="date" value="@fromDateWorks">
+                <input class="text-box single-line" data-val="true" data-val-date="The field To Date must be a date." data-val-required="The To Date field is required." id="ToDatePie" name="ToDateWorks" type="date" value="@toDateWorks">
+                <input type="submit" value="Generate" class="btn btn-default"/>
+            }
+
+        </p>
+        @{
+            string lineImage = Url.Action("GetWorksLineChart", new {fromDateWorks = ViewBag.FromDateWorks, toDateWorks = ViewBag.ToDateWorks, groupId = ViewBag.SelectedGroupID});
+            <img src="@lineImage" alt="Chart"/>
+        }
+    </div>
+
+    <div class="text-center">
+        <p>
+            @*@Html.LabelFor(model => model.GroupName)
+            @Html.DropDownList("GroupID", null, htmlAttributes: new { @class = "form-control2" })*@
+            @{
+            string fromDateUserWorks = ViewBag.FromDateUserWorks;
+            string toDateUserWorks = ViewBag.ToDateUserWorks;
+            <input class="text-box single-line" data-val="true" data-val-date="The field From Date must be a date." data-val-required="The From Date field is required." id="FromDatePie" name="FromDateUserWorks" type="date" value="@fromDateUserWorks">
+                <input class="text-box single-line" data-val="true" data-val-date="The field To Date must be a date." data-val-required="The To Date field is required." id="ToDatePie" name="ToDateUserWorks" type="date" value="@toDateUserWorks">
+                <input type="submit" value="Generate" class="btn btn-default" />
+            }
+
+        </p>
+        @{
+    string onlyUserTaskImage = Url.Action("GetUserTimeSpendOnTask", new { fromDateUserWorks = ViewBag.FromDateUserWorks, toDateUserWorks = ViewBag.ToDateUserWorks });
+    <img src="@onlyUserTaskImage" alt="Chart" />
+        }
+    </div>
+
+
+    @*<div class="text-center">
+        <p>
+            @{
+    string fromDateWork = ViewBag.FromDatePie;
+    string toDateWork = ViewBag.ToDatePie;
+    <input class="text-box single-line" data-val="true" data-val-date="The field From Date must be a date." data-val-required="The From Date field is required." id="FromDateWorks" name="FromDateWorks" type="date" value="@fromDateWork">
+                <input class="text-box single-line" data-val="true" data-val-date="The field To Date must be a date." data-val-required="The To Date field is required." id="ToDateWorks" name="ToDateWorks" type="date" value="@toDateWork">
+                <input type="submit" value="generate" />
+            }
+        </p>
+        @{
+    string worksImg = Url.Action("GetChart", new { type = ViewBag.Type });
+    <img src="@worksImg" alt="Chart" />
+        }
+    </div>*@
+}

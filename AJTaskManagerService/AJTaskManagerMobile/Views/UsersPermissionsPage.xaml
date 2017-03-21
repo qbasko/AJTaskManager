@@ -1,0 +1,73 @@
+﻿<common:BindablePage
+    x:Class="AJTaskManagerMobile.Views.UsersPermissionsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AJTaskManagerMobile.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:common="using:AJTaskManagerMobile.Common"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding UsersPermissionsViewModel, Source={StaticResource Locator}}"
+    Name="UserPermissions" >
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <ImageBrush x:Key="BackgroundImageBrush" ImageSource="../Assets/ItemsBackground2.png"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrast">
+                    <ImageBrush x:Key="BackgroundImageBrush" ImageSource="{x:Null}"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource BackgroundImageBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Left" FontSize="15"  Margin="10,38,0,0" TextWrapping="Wrap" Text="{Binding UsersEmail}" VerticalAlignment="Top"/>
+        <ListView Grid.Row="1" ItemsSource="{Binding UserPermissions, Mode=TwoWay}" Margin="10,0,10,10" ShowsScrollingPlaceholders="True" IsItemClickEnabled="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Grid.Column="0" Margin="35,30,0,0" IsChecked="{Binding IsChecked, Mode=TwoWay}" VerticalAlignment="Center" Background="SaddleBrown" GroupName="Permissions">
+                                <RadioButton.ContentTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Margin="30,0,0,0" Text="{Binding RoleName}" Foreground="SaddleBrown" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20">
+                                            <interactivity:Interaction.Behaviors>
+                                             <core:EventTriggerBehavior EventName="Tapped">
+                                                <core:InvokeCommandAction Command="{Binding DataContext.PermissionChangeCommand, ElementName=UserPermissions}"
+                                                                CommandParameter="{Binding}"/>
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </RadioButton.ContentTemplate>
+                                <interactivity:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="Checked">
+                                        <core:InvokeCommandAction Command="{Binding DataContext.PermissionChangeCommand, ElementName=UserPermissions}"
+                                                                CommandParameter="{Binding}"/>
+                                    </core:EventTriggerBehavior>
+                                    <core:EventTriggerBehavior EventName="Unchecked">
+                                        <core:InvokeCommandAction Command="{Binding DataContext.PermissionChangeCommand, ElementName=UserPermissions}"
+                                                                CommandParameter="{Binding}"/>
+                                    </core:EventTriggerBehavior>
+                                </interactivity:Interaction.Behaviors>
+                            </RadioButton>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</common:BindablePage>

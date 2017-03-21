@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Settings";
+}
+
+
+<h2>Settings</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <a href="@Url.Action("Edit", "UserInfo", ViewBag.User)">
+            <h2>Personal Information</h2>
+            <p>
+                Update your personal information
+            </p>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="@Url.Action("Edit", "EmailInvitation", ViewBag.User)">
+            <h2>Email invitation</h2>
+            <p>
+                Send an email to your friend with invitation to AJTaskManager
+            </p>
+        </a>
+    </div>
+</div>

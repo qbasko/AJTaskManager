@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLComponentDiagram1">
+  <componentModelMoniker Id="762ecc49-5c6b-4241-bdd9-689ba273a3b5" />
+  <nestedChildShapes>
+    <componentShape Id="3b21be55-4b75-4ecf-9d17-f97233cd761c" absoluteBounds="4.75, 4.25, 4.4333333333333336, 1.7999999999999998" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="d03080ed-a2c3-412b-83b4-75f6cd4c9f80" LastKnownName="Windows Azure Mobile Service" />
+      <relativeChildShapes>
+        <providedInterfaceShape Id="98e56156-1fcd-48ed-8b2a-70bad796d38e" absoluteBounds="6.8125, 3.3958333333333339, 0.15625, 0.85416666666666607" blackBoxLocation="0" whiteBoxLocation="0" whiteBoxEdge="" blackBoxEdge="" whiteBoxIsOnPort="false" blackBoxIsOnPort="false">
+          <providedInterfaceMoniker Id="18aaf19a-d8bf-4ac6-af87-287894fdfb68" LastKnownName="Port1" />
+          <relativeChildShapes />
+          <moveableDecoratorHostShapes>
+            <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="6.25, 3.34375, 0.49282041192054749, 0.14800345897674561" shapeFieldName="Label" />
+          </moveableDecoratorHostShapes>
+        </providedInterfaceShape>
+      </relativeChildShapes>
+      <nestedChildShapes>
+        <componentUseShape Id="3bb98d42-f0b6-43ca-bab2-7cc150c169b5" absoluteBounds="7.5, 5, 1.5833333333333339, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+          <partMoniker Id="02ed4ff3-2493-4c0d-aec8-91c12e4697a6" LastKnownName="Baza danych" />
+        </componentUseShape>
+        <componentUseShape Id="2e3b211f-6a83-417b-9da3-2812d665d330" absoluteBounds="4.875, 5, 2.3437500000000009, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+          <partMoniker Id="08c39816-7f70-4c01-9022-3487fcdc7562" LastKnownName="Moduł dostępu do danych" />
+        </componentUseShape>
+      </nestedChildShapes>
+    </componentShape>
+    <componentShape Id="e4d578e7-ca14-4794-b3d6-24722d95786b" absoluteBounds="7.75, 2.25, 2.7187500000000018, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="e89a23b4-2ec8-4b9b-8b4f-73dfd0e09d8d" LastKnownName="Aplikacja mobilna - Windows Phone" />
+      <relativeChildShapes>
+        <requiredInterfaceShape Id="d55cc571-f847-4c5d-9bf6-1b5bddf2ac9a" absoluteBounds="7.34375, 2.84375, 0.40625, 0.15625" blackBoxLocation="0" whiteBoxLocation="0" whiteBoxEdge="" blackBoxEdge="" whiteBoxIsOnPort="false" blackBoxIsOnPort="false">
+          <requiredInterfaceMoniker Id="162e104b-42e9-4e80-93fb-95ceac021409" LastKnownName="Port1" />
+          <relativeChildShapes />
+        </requiredInterfaceShape>
+      </relativeChildShapes>
+    </componentShape>
+    <componentShape Id="7cea9db1-b413-4ded-886a-c668055fa93e" absoluteBounds="3.375, 2.25, 2.697916666666667, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="7a28c1d9-abb0-4738-868f-048937f41bd4" LastKnownName="Aplikacja internetowa - ASP.NET MVC" />
+      <relativeChildShapes>
+        <requiredInterfaceShape Id="9a0b0c65-9ee9-407a-84ef-201d3b043437" absoluteBounds="6.072916666666667, 2.84375, 0.40625, 0.15625" blackBoxLocation="0" whiteBoxLocation="0" whiteBoxEdge="" blackBoxEdge="" whiteBoxIsOnPort="false" blackBoxIsOnPort="false">
+          <requiredInterfaceMoniker Id="aa413fae-ccbd-4097-9c3f-6c05a0a05ad8" LastKnownName="Port1" />
+          <relativeChildShapes />
+        </requiredInterfaceShape>
+      </relativeChildShapes>
+    </componentShape>
+    <dependencyConnector edgePoints="[(6.47916666666667 : 2.921875); (6.890625 : 2.921875); (6.890625 : 3.39583333333333)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="becc1d33-ee8e-4806-8157-161773826faf" />
+      <relativeChildShapes />
+      <nodes>
+        <requiredInterfaceShapeMoniker Id="9a0b0c65-9ee9-407a-84ef-201d3b043437" />
+        <providedInterfaceShapeMoniker Id="98e56156-1fcd-48ed-8b2a-70bad796d38e" />
+      </nodes>
+    </dependencyConnector>
+    <dependencyConnector edgePoints="[(7.34375 : 2.921875); (6.890625 : 2.921875); (6.890625 : 3.39583333333333)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="1043a92d-227f-413f-96d1-786235170130" />
+      <relativeChildShapes />
+      <nodes>
+        <requiredInterfaceShapeMoniker Id="d55cc571-f847-4c5d-9bf6-1b5bddf2ac9a" />
+        <providedInterfaceShapeMoniker Id="98e56156-1fcd-48ed-8b2a-70bad796d38e" />
+      </nodes>
+    </dependencyConnector>
+  </nestedChildShapes>
+</componentDiagram>

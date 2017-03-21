@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebApplication1.Models.GroupUserModel>
+
+@{
+    ViewBag.Title = "Group Users";
+}
+
+<h2>Group Users</h2>
+
+<p>
+    @Html.ActionLink("Add User", "Create", new { groupId = ViewBag.GroupId })
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.UserGroupId)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.RoleTypeId)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.RoleName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.UserGroupId)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.UserEmail)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.RoleTypeId)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { userGroupId = item.UserGroupId }) |
+                @Html.ActionLink("Details", "Details", new { userGroupId = item.UserGroupId }) |
+                @Html.ActionLink("Delete", "Delete", new { userGroupId = item.UserGroupId })
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("Back to List", "Index", "Group")
+</div>

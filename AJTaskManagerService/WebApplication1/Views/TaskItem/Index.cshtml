@@ -1,0 +1,99 @@
+﻿@using WebApplication1.Services
+@model IEnumerable<WebApplication1.Models.TaskItemModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Projects</h2>
+
+<p>
+    @Html.ActionLink("Create new project", "Create")
+</p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Project Name", "Index", new { sortOrder = ViewBag.TaskNameParam })
+            @*@Html.DisplayNameFor(model => model.Name)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.ActionLink("Status", "Index", new { sortOrder = ViewBag.StatusParam })
+            @* @Html.DisplayNameFor(model => model.Status)*@
+        </th>
+        <th>
+            @* @Html.DisplayNameFor(model => model.StatusId)*@
+        </th>
+        <th>
+            @Html.ActionLink("Start Date", "Index", new { sortOrder = ViewBag.StartDateParam })
+            @* @Html.DisplayNameFor(model => model.StartDate)*@
+        </th>
+        <th>
+            @Html.ActionLink("End Date", "Index", new { sortOrder = ViewBag.EndDateParam })
+            @*@Html.DisplayNameFor(model => model.EndDate)*@
+        </th>
+        <th>
+            @Html.ActionLink("Group Name", "Index", new { sortOrder = ViewBag.GroupNameParam })
+            @*@Html.DisplayNameFor(model => model.GroupName)*@
+        </th>
+        <th>
+            @*  @Html.DisplayNameFor(model => model.GroupId)*@
+        </th>
+        <th>
+            @Html.ActionLink("Is Completed", "Index", new { sortOrder = ViewBag.IsCompletedParam })
+           @* @Html.DisplayNameFor(model => model.IsCompleted)*@
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @*    @Html.DisplayFor(modelItem => item.StatusId)*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroupName)
+            </td>
+            <td>
+                @*     @Html.DisplayFor(modelItem => item.GroupId)*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCompleted)
+            </td>
+            <td>
+                @Html.ActionLink("Activities", "Subitems", new { taskItemId = item.TaskItemId }) |
+                @Html.ActionLink("Details", "Details", new { taskItemId = item.TaskItemId }) |
+                @Html.ActionLink("Edit", "Edit", new { taskItemId = item.TaskItemId }) |
+                @Html.ActionLink("Delete", "Delete", new { taskItemId = item.TaskItemId })
+            </td>
+        </tr>
+    }
+
+</table>
